@@ -15,7 +15,10 @@ public class ReportesActivity extends AppCompatActivity {
     }
 
     public void mostrarDatePicker(View view){
+        Bundle args = new Bundle();
+        args.putInt("boton",view.getId());
         DialogFragment fragment = new FechaHoraFragment();
+        fragment.setArguments(args);
         fragment.show(getSupportFragmentManager(), "datePicker");
     }
 }
