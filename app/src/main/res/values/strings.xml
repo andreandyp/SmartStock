@@ -2,5 +2,54 @@
     <string name="app_name">SmartStock</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_reportes">ReportesActivity</string>
+    <string name="action_settings">Opciones</string>
+
+    <string-array name="años">
+        <item>2017</item>
+        <item>2016</item>
+        <item>2015</item>
+        <item>2014</item>
+        <item>2013</item>
+        <item>2012</item>
+        <item>2011</item>
+        <item>2010</item>
+    </string-array>
+
+    <string-array name="meses">
+        <item>Enero</item>
+        <item>Febrero</item>
+        <item>Marzo</item>
+        <item>Abril</item>
+        <item>Mayo</item>
+        <item>Junio</item>
+        <item>Julio</item>
+        <item>Agosto</item>
+        <item>Septiembre</item>
+        <item>Octubre</item>
+        <item>Noviembre</item>
+        <item>Diciembre</item>
+    </string-array>
+
+    <string-array name="semanas">
+        <item>1a semana</item>
+        <item>2a semana</item>
+        <item>3a semana</item>
+        <item>4a semana</item>
+        <item>5a semana</item>
+    </string-array>
+
+    <string-array name="categorias">
+        <item>ID</item>
+        <item>Descripción</item>
+        <item>Existencia</item>
+        <item>Marca</item>
+        <item>Modelo</item>
+        <item>Tamaño de pantalla</item>
+        <item>RAM</item>
+        <item>Procesador</item>
+        <item>Almacenamiento</item>
+        <item>Sistema operativo</item>
+        <item>Tipo</item>
+    </string-array>
 </resources>

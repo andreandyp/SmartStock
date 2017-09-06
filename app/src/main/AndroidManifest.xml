@@ -16,7 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ReportesActivity"></activity>
+        <activity
+            android:name=".ReportesActivity"
+            android:label="@string/title_activity_reportes"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
