@@ -1,9 +1,47 @@
 <resources>
-    <string name="app_name">SmartStock</string>
+    <string name="app_name">SmartStock :)</string>
+
+
+    <string name="inicia_sesi_n">Inicia Sesión</string>
+    <string name="nombre_empresa">Nombre@Empresa</string>
+    <string name="recu_rdame">Recuérdame</string>
+    <string name="contrase_a">contraseña</string>
+    <string name="olvidaste_la_contrase_a">¿Olvidaste la contraseña?</string>
+
+    <string name="action_settings">Configuración</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="drawer_open">Se abrio el menu lateral</string>
+    <string name="drawer_close">Se cerro el menu lateral</string>
+
+    <!-- Nombres de los items -->
+    <string-array name="nav_drawer_items">
+        <item>Seccion1</item>
+        <item>Seccion2</item>
+        <item>Seccion3</item>
+        <item>Seccion4</item>
+    </string-array>
+
+    <!-- Iconos de los items -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_whats_hot</item>
+        <item>@drawable/ic_people</item>
+        <item>@drawable/ic_photos</item>
+        <item>@drawable/ic_communities</item>
+    </array>
+
+    <string-array name="equipo">
+        <item>Seleccione</item>
+        <item>Escritorio</item>
+        <item>Portatil</item>
+        <item>Otros</item>
+    </string-array>
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="title_activity_reportes">ReportesActivity</string>
-    <string name="action_settings">Opciones</string>
+    <string name="action_settingss">Opciones</string>
 
     <string-array name="años">
         <item>2017</item>
@@ -40,16 +78,9 @@
     </string-array>
 
     <string-array name="categorias">
-        <item>ID</item>
+        <item>N° serie</item>
         <item>Descripción</item>
         <item>Existencia</item>
-        <item>Marca</item>
-        <item>Modelo</item>
-        <item>Tamaño de pantalla</item>
-        <item>RAM</item>
-        <item>Procesador</item>
-        <item>Almacenamiento</item>
-        <item>Sistema operativo</item>
-        <item>Tipo</item>
+        <item>Propietario</item>
     </string-array>
 </resources>

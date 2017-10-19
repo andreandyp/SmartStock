@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.smartstock">
+    package="com.example.gambo.demo_proyecto">
 
     <application
         android:allowBackup="true"
@@ -16,10 +16,31 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ReportesActivity"
-            android:label="@string/title_activity_reportes"
-            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="mx.ipn.escom.reportes.ReportesPrincipal" />
+        <activity android:name="mx.ipn.escom.reportes.ReportesActivity" />
+        <activity android:name="mx.ipn.escom.vistas.CodigoQrPrincipal" />
+        <activity android:name="mx.ipn.escom.vistas.UsuarioInicioActivity" />
+        <activity android:name="mx.ipn.escom.vistas.RegistrarEmpresaActivity" />
+        <activity android:name="mx.ipn.escom.vistas.OlvideContrasenaActivity" />
+        <activity android:name="mx.ipn.escom.vistas.IngresaCodigoActivity" />
+        <activity android:name="mx.ipn.escom.vistas.MenuActivity" />
+        <activity android:name="mx.ipn.escom.vistas.ConfigCuentaActivity" />
+        <activity android:name="mx.ipn.escom.vistas.ManejoUsuariosActivity" />
+        <activity android:name="mx.ipn.escom.vistas.CambiarContrasenaActivity" />
+        <activity android:name="mx.ipn.escom.vistas.InventariosPrincipal" />
+        <activity android:name="mx.ipn.escom.vistas.ConfigurarInventario" />
+        <activity android:name="mx.ipn.escom.vistas.Inventario" />
+        <activity android:name="mx.ipn.escom.vistas.ScanearQr" />
+        <activity android:name="mx.ipn.escom.vistas.RegistrarProducto" />
+        <activity android:name="mx.ipn.escom.vistas.Formulario_CPU" />
+        <activity android:name="mx.ipn.escom.vistas.Formulario_Monitor" />
+        <activity android:name="mx.ipn.escom.vistas.Formulario_Perifericos" />
+        <activity android:name="mx.ipn.escom.vistas.Formularo_Portatil" />
+        <activity android:name="mx.ipn.escom.vistas.ConfigurarCuenta"></activity>
+        <activity android:name="mx.ipn.escom.vistas.Activity_escanerCodigo"/>
+        <activity android:name="mx.ipn.escom.vistas.Activity_Producto"/>
+        <activity android:name="mx.ipn.escom.vistas.Activity_editarEmpleado"/>
+        <activity android:name="mx.ipn.escom.controlacceso.vista.InicioSesionActivity"/>
     </application>
 
 </manifest>
