@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mx.ipn.escom.vistas.MenuActivity">
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="61dp"
+        android:layout_height="58dp"
+        app:srcCompat="@mipmap/ic_account_circle_black_24dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Empresa"
+        android:textColor="#663500"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="23dp"
+        android:layout_above="@+id/textView28"
+        android:layout_toStartOf="@+id/textView35" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usuario"
+        android:textColor="#663500"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteY="45dp"
+        tools:layout_editor_absoluteX="96dp"
+        android:layout_alignBottom="@+id/imageView14"
+        android:layout_toEndOf="@+id/imageView14"
+        android:layout_marginStart="16dp" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="38dp"
+        android:layout_height="31dp"
+        app:srcCompat="@mipmap/ic_folder_black_24dp"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="114dp"
+        android:layout_alignBottom="@+id/textView29"
+        android:layout_alignEnd="@+id/imageView14" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mi inventario"
+        android:textColor="#663300"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="89dp"
+        tools:layout_editor_absoluteY="114dp"
+        android:layout_marginTop="36dp"
+        android:layout_below="@+id/textView28"
+        android:layout_alignStart="@+id/textView28" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="36dp"
+        android:layout_height="33dp"
+        app:srcCompat="@mipmap/ic_description_black_24dp"
+        tools:layout_editor_absoluteY="156dp"
+        tools:layout_editor_absoluteX="41dp"
+        android:layout_alignBottom="@+id/textView31"
+        android:layout_alignStart="@+id/imageView15" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reportes"
+        android:textColor="#663300"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="89dp"
+        tools:layout_editor_absoluteY="156dp"
+        android:layout_below="@+id/textView29"
+        android:layout_alignStart="@+id/textView29"
+        android:layout_marginTop="25dp" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="34dp"
+        android:layout_height="37dp"
+        app:srcCompat="@mipmap/ic_select_all_black_24dp"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="204dp"
+        android:layout_alignTop="@+id/textView32"
+        android:layout_alignEnd="@+id/imageView15" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="206dp"
+        android:layout_height="59dp"
+        android:text="Código QR y de barras"
+        android:textColor="#663300"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="89dp"
+        tools:layout_editor_absoluteY="204dp"
+        android:layout_below="@+id/textView31"
+        android:layout_alignStart="@+id/textView31"
+        android:layout_marginTop="19dp" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="33dp"
+        android:layout_height="31dp"
+        app:srcCompat="@mipmap/ic_settings_black_24dp"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="281dp"
+        android:layout_alignTop="@+id/textView33"
+        android:layout_alignStart="@+id/imageView24" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Configuración"
+        android:textColor="#663300"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="281dp"
+        android:layout_below="@+id/textView32"
+        android:layout_alignStart="@+id/textView32"
+        android:layout_marginTop="31dp" />
+
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="36dp"
+        android:layout_height="32dp"
+        app:srcCompat="@mipmap/ic_people_black_24dp"
+        tools:layout_editor_absoluteY="336dp"
+        tools:layout_editor_absoluteX="41dp"
+        android:layout_alignTop="@+id/textView34"
+        android:layout_alignStart="@+id/imageView20" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cuentas"
+        android:textColor="#663300"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="336dp"
+        android:layout_below="@+id/textView33"
+        android:layout_alignStart="@+id/textView33"
+        android:layout_marginTop="26dp" />
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cerrar sesión"
+        android:textColor="#663300"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="112dp"
+        tools:layout_editor_absoluteY="466dp"
+        android:layout_marginBottom="18dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/textView32" />
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="39dp"
+        android:layout_height="36dp"
+        app:srcCompat="@mipmap/ic_forward_black_24dp"
+        tools:layout_editor_absoluteY="459dp"
+        tools:layout_editor_absoluteX="259dp"
+        android:layout_alignBottom="@+id/textView35"
+        android:layout_toEndOf="@+id/textView35"
+        android:layout_marginStart="13dp" />
+
+</RelativeLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mx.ipn.escom.controlacceso.vista.ManejoUsuariosActivity">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="44dp"
+        android:layout_height="42dp"
+        app:srcCompat="@mipmap/ic_people_black_24dp"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="37dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/textView13"
+        android:layout_marginTop="45dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manejo de usuarios"
+        android:textColor="#663500"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="50dp"
+        android:layout_marginStart="17dp"
+        android:layout_alignBottom="@+id/imageView5"
+        android:layout_toEndOf="@+id/imageView5" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="122dp"
+        android:layout_height="18dp"
+        android:text="Nombre de usuario"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="124dp"
+        android:layout_alignBaseline="@+id/editText5"
+        android:layout_alignBottom="@+id/editText5"
+        android:layout_alignStart="@+id/imageView5" />
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="166dp"
+        android:layout_height="28dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="119dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="22dp"
+        android:layout_below="@+id/textView9"
+        android:layout_toEndOf="@+id/textView13" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="98dp"
+        android:layout_height="32dp"
+        android:background="#ffce99"
+        android:text="Agregar"
+        android:textColor="#663500"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="164dp"
+        android:layout_below="@+id/textView12"
+        android:layout_alignEnd="@+id/button4"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usuario 1"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="119dp"
+        tools:layout_editor_absoluteY="250dp"
+        android:layout_alignBottom="@+id/imageView8"
+        android:layout_toStartOf="@+id/button4" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usuario 2"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="119dp"
+        tools:layout_editor_absoluteY="294dp"
+        android:layout_marginBottom="42dp"
+        android:layout_above="@+id/button4"
+        android:layout_alignStart="@+id/textView13" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/ic_mode_edit_black_24dp"
+        tools:layout_editor_absoluteX="230dp"
+        tools:layout_editor_absoluteY="247dp"
+        android:layout_alignTop="@+id/textView14"
+        android:layout_toEndOf="@+id/imageView8"
+        android:layout_alignStart="@+id/imageView8" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/ic_mode_edit_black_24dp"
+        tools:layout_editor_absoluteY="287dp"
+        tools:layout_editor_absoluteX="230dp"
+        android:layout_marginBottom="36dp"
+        android:layout_above="@+id/imageView9"
+        android:layout_alignStart="@+id/editText5"
+        android:layout_marginStart="23dp" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="23dp"
+        android:layout_height="31dp"
+        app:srcCompat="@mipmap/ic_delete_black_24dp"
+        tools:layout_editor_absoluteX="262dp"
+        tools:layout_editor_absoluteY="240dp"
+        android:layout_alignBottom="@+id/textView14"
+        android:layout_toEndOf="@+id/button4" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="23dp"
+        android:layout_height="29dp"
+        app:srcCompat="@mipmap/ic_delete_black_24dp"
+        tools:layout_editor_absoluteX="262dp"
+        tools:layout_editor_absoluteY="282dp"
+        android:layout_alignTop="@+id/imageView8"
+        android:layout_alignStart="@+id/imageView9"
+        android:layout_alignEnd="@+id/imageView9" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="93dp"
+        android:layout_height="36dp"
+        android:background="#ffce99"
+        android:text="Aceptar"
+        android:textColor="#663500"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="228dp"
+        tools:layout_editor_absoluteY="359dp"
+        android:layout_marginBottom="72dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

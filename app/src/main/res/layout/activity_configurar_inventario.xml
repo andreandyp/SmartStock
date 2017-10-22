@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mx.ipn.escom.inventario.vista.ConfigurarInventario">
+
+    <TextView
+        android:id="@+id/lblTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="29dp"
+        android:layout_y="77dp"
+        android:paddingEnd="20dp"
+        android:paddingLeft="20dp"
+        android:text="Titulo"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/Titulo"
+        android:layout_width="221dp"
+        android:layout_height="18dp"
+        android:layout_x="124dp"
+        android:layout_y="80dp"
+        android:inputType="textCapSentences|textAutoCorrect" />
+
+    <TextView
+        android:id="@+id/lblAutor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="34dp"
+        android:layout_y="125dp"
+        android:paddingEnd="20dp"
+        android:paddingLeft="20dp"
+        android:text="Autor"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/lblDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="35dp"
+        android:layout_y="176dp"
+        android:text="Descripción"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/Descripcion"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="323dp"
+        android:layout_height="105dp"
+        android:layout_x="32dp"
+        android:layout_y="209dp"
+        android:hint="Descripción"
+        android:inputType="text|textAutoCorrect|textMultiLine" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="3dp"
+        android:layout_y="19dp"
+        android:text="Configurar  Nuevo Inventario"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="-3dp" />
+
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="200dp"
+        android:layout_y="444dp"
+        android:text="Cancelar" />
+
+    <Button
+        android:id="@+id/btnAceptar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="96dp"
+        android:layout_y="445dp"
+        android:text="Aceptar" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="127dp"
+        android:layout_y="125dp"
+        android:text="Carla Sanchez Herrera" />
+</AbsoluteLayout>

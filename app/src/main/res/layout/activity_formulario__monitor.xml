@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mx.ipn.escom.producto.vista.Formulario_Monitor">
+
+    <TextView
+        android:id="@+id/textView49"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Numero de Monitores"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="68dp"
+        android:layout_alignBottom="@+id/editText22"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/editText22"
+        android:layout_width="71dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="2"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="167dp"
+        tools:layout_editor_absoluteY="45dp"
+        android:layout_below="@+id/textView50"
+        android:layout_toEndOf="@+id/textView49"
+        android:layout_marginTop="28dp" />
+
+    <TextView
+        android:id="@+id/textView50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monitor"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/editText22"
+        android:layout_marginTop="19dp" />
+
+    <TextView
+        android:id="@+id/textView51"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Marca"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="128dp"
+        android:layout_alignBottom="@+id/editText23"
+        android:layout_toStartOf="@+id/editText22" />
+
+    <EditText
+        android:id="@+id/editText23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="115dp"
+        android:layout_below="@+id/editText25"
+        android:layout_alignStart="@+id/editText25"
+        android:layout_marginTop="19dp" />
+
+    <TextView
+        android:id="@+id/textView52"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QR"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="178dp"
+        android:layout_alignBottom="@+id/editText24"
+        android:layout_alignEnd="@+id/textView51" />
+
+    <EditText
+        android:id="@+id/editText24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="166dp"
+        android:layout_above="@+id/button11"
+        android:layout_alignStart="@+id/editText25"
+        android:layout_marginBottom="75dp" />
+
+    <TextView
+        android:id="@+id/textView53"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Marca"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="246dp"
+        android:layout_alignBottom="@+id/editText26"
+        android:layout_alignEnd="@+id/textView54" />
+
+    <TextView
+        android:id="@+id/textView54"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QR"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="296dp"
+        android:layout_alignBottom="@+id/editText25"
+        android:layout_alignEnd="@+id/textView51" />
+
+    <EditText
+        android:id="@+id/editText25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="234dp"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/textView53"
+        android:layout_alignStart="@+id/editText26" />
+
+    <EditText
+        android:id="@+id/editText26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="288dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/editText22"
+        android:layout_alignStart="@+id/textView50" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Finalizar"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="434dp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

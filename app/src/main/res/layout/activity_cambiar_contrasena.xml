@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mx.ipn.escom.controlacceso.vista.CambiarContrasenaActivity">
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="47dp"
+        android:layout_height="45dp"
+        app:srcCompat="@mipmap/ic_lock_outline_black_24dp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="19dp"
+        android:layout_marginEnd="17dp"
+        android:layout_alignBottom="@+id/textView24"
+        android:layout_toStartOf="@+id/textView24" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cambiar contraseña"
+        android:textColor="#663500"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="35dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/editText16" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contraseña"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="118dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/imageView13"
+        android:layout_alignStart="@+id/editText15" />
+
+    <EditText
+        android:id="@+id/editText15"
+        android:layout_width="311dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="135dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/textView25"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmar contraseña"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="222dp"
+        android:layout_above="@+id/editText16"
+        android:layout_alignStart="@+id/editText15"
+        android:layout_marginBottom="13dp" />
+
+    <EditText
+        android:id="@+id/editText16"
+        android:layout_width="309dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="233dp"
+        android:layout_marginBottom="39dp"
+        android:layout_above="@+id/button8"
+        android:layout_alignStart="@+id/textView26" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="107dp"
+        android:layout_height="38dp"
+        android:background="#ffce99"
+        android:text="Aceptar"
+        android:textColor="#663500"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteY="303dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="97dp" />
+</RelativeLayout>
