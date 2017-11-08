@@ -15,6 +15,7 @@ public class IngresaCodigoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_ingresa_codigo);
         final Button button7 = (Button)findViewById(R.id.button7);
         button7.setOnClickListener(new View.OnClickListener() {

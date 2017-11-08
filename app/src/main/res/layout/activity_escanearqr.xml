@@ -12,12 +12,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
-        app:srcCompat="@mipmap/codigo_qr"
-        android:layout_below="@+id/textView77"
+        app:srcCompat="@drawable/qr"
+        android:layout_below="@+id/contenido"
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:id="@+id/textView77"
+        android:id="@+id/contenido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Código QR escaneado"

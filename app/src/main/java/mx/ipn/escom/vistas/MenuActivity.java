@@ -13,7 +13,7 @@ import mx.ipn.escom.codigoqr.vista.EscanearQRActivity;
 import mx.ipn.escom.controlacceso.vista.ConfigurarCuenta;
 import mx.ipn.escom.controlacceso.vista.InicioSesionActivity;
 import mx.ipn.escom.inventario.vista.InventariosPrincipal;
-import mx.ipn.escom.reporte.vista.ReportesPrincipal;
+import mx.ipn.escom.reporte.vista.ReportesActivity;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -63,14 +63,14 @@ public class MenuActivity extends AppCompatActivity {
         textView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MenuActivity.this,ReportesPrincipal.class);
+                Intent intent=new Intent(MenuActivity.this,ReportesActivity.class);
                 startActivity(intent);
             }
         });
         imageView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MenuActivity.this,ReportesPrincipal.class);
+                Intent intent=new Intent(MenuActivity.this,ReportesActivity.class);
                 startActivity(intent);
             }
         });

@@ -1,62 +1,54 @@
 package mx.ipn.escom.codigoqr.vista;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.gambo.demo_proyecto.R;
-
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 
 public class EscanearQRActivity extends AppCompatActivity {
 
-    private final static int OBTENER_IMAGEN = 1;
     private ImageView codigoQR;
+    private TextView contenido;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        IntentIntegrator integrator;
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_escanearqr);
 
         codigoQR = (ImageView) findViewById(R.id.codigoQR);
+        contenido = (TextView) findViewById(R.id.contenido);
 
-        tomarFoto();
-    }
-
-    private void tomarFoto(){
-        Intent tomarfoto = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivityForResult(tomarfoto, OBTENER_IMAGEN);
+        integrator = new IntentIntegrator(this);
+        integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
+        integrator.setPrompt("Escanea el código QR del producto");
+        integrator.setBarcodeImageEnabled(true);
+        integrator.initiateScan();
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        OutputStream os;
-        Bitmap codigoEscaneado;
-        File archivoTMP;
-
-        if (requestCode == OBTENER_IMAGEN && resultCode == RESULT_OK) {
-            Bundle extras = data.getExtras();
-            codigoEscaneado = (Bitmap) extras.get("data");
-            archivoTMP = new File(getCacheDir(), "qr.png");
-            try{
-                os = new BufferedOutputStream(new FileOutputStream(archivoTMP));
-                codigoEscaneado.compress(Bitmap.CompressFormat.PNG, 100, os);
-                os.close();
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        if(result != null) {
+            if(result.getContents() != null) {
+                contenido.setText("Contenido del QR: "+result.getContents());
+                codigoQR.setImageURI(Uri.parse(result.getBarcodeImagePath()));
+            } else {
+                Toast.makeText(this, "Ningún código QR fue escaneado", Toast.LENGTH_LONG).show();
+                finish();
             }
-            catch(Exception ex){
-
-            }
-
-            //codigoQR.setImageBitmap(codigoEscaneado);
-        }else{
-            //El usuario decidió no guardar la foto
-            finish();
+        } else {
+            super.onActivityResult(requestCode, resultCode, data);
         }
     }
+
+
 }

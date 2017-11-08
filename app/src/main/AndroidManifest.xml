@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.gambo.demo_proyecto">
 
+    <uses-feature android:name="android.hardware.camera" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +10,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <uses-feature android:name="android.hardware.camera" />
 
         <activity android:name="mx.ipn.escom.controlacceso.vista.InicioSesionActivity">
             <intent-filter>
@@ -30,10 +30,8 @@
         <activity android:name="mx.ipn.escom.controlacceso.vista.ManejoUsuariosActivity" />
         <activity android:name="mx.ipn.escom.controlacceso.vista.UsuarioInicioActivity" />
         <activity android:name="mx.ipn.escom.controlacceso.vista.RegistrarEmpresaActivity" />
-        <activity android:name="mx.ipn.escom.codigoqr.vista.CodigoQrPrincipal" />
         <activity android:name="mx.ipn.escom.codigoqr.vista.IngresaCodigoActivity" />
         <activity android:name="mx.ipn.escom.codigoqr.vista.EscanearQRActivity" />
-        <activity android:name="mx.ipn.escom.codigoqr.vista.ScanearQr" />
         <activity android:name="mx.ipn.escom.inventario.vista.ConfigurarInventario" />
         <activity android:name="mx.ipn.escom.inventario.vista.Inventario" />
         <activity android:name="mx.ipn.escom.inventario.vista.InventariosPrincipal" />
@@ -44,9 +42,8 @@
         <activity android:name="mx.ipn.escom.producto.vista.Formularo_Portatil" />
         <activity android:name="mx.ipn.escom.producto.vista.RegistrarProducto" />
         <activity android:name="mx.ipn.escom.reporte.vista.ReportesActivity" />
-        <activity android:name="mx.ipn.escom.reporte.vista.ReportesPrincipal" />
         <activity android:name="mx.ipn.escom.controlacceso.vista.ConfigCuentaActivity" />
-        <activity android:name="mx.ipn.escom.controlacceso.vista.ConfigurarCuenta"></activity>
+        <activity android:name="mx.ipn.escom.controlacceso.vista.ConfigurarCuenta"/>
     </application>
 
 </manifest>

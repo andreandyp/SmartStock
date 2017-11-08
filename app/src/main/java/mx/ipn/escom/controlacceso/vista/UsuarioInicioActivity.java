@@ -22,7 +22,6 @@ public class UsuarioInicioActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(UsuarioInicioActivity.this,MenuActivity.class);
                 startActivity(intent);
-                setContentView(R.layout.activity_menu);
             }
         });
     }
