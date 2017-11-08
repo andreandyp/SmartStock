@@ -9,17 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <uses-feature android:name="android.hardware.camera" />
+
+        <activity android:name="mx.ipn.escom.controlacceso.vista.InicioSesionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="mx.ipn.escom.reportes.ReportesPrincipal" />
-        <activity android:name="mx.ipn.escom.reportes.ReportesActivity" />
         <activity android:name="mx.ipn.escom.vistas.MenuActivity" />
-        <activity android:name="mx.ipn.escom.controlacceso.vista.InicioSesionActivity" />
+
+        <!--Al establecerla como la actividad principal, ya no es necesario declararla en el manifest-->
+        <!--<activity android:name="mx.ipn.escom.controlacceso.vista.InicioSesionActivity" />-->
+
         <activity android:name="mx.ipn.escom.controlacceso.vista.Activity_editarEmpleado" />
         <activity android:name="mx.ipn.escom.controlacceso.vista.CambiarContrasenaActivity" />
         <activity android:name="mx.ipn.escom.controlacceso.vista.IngresaCodigoActivity" />
@@ -29,7 +32,7 @@
         <activity android:name="mx.ipn.escom.controlacceso.vista.RegistrarEmpresaActivity" />
         <activity android:name="mx.ipn.escom.codigoqr.vista.CodigoQrPrincipal" />
         <activity android:name="mx.ipn.escom.codigoqr.vista.IngresaCodigoActivity" />
-        <activity android:name="mx.ipn.escom.codigoqr.vista.Activity_escanerCodigo" />
+        <activity android:name="mx.ipn.escom.codigoqr.vista.EscanearQRActivity" />
         <activity android:name="mx.ipn.escom.codigoqr.vista.ScanearQr" />
         <activity android:name="mx.ipn.escom.inventario.vista.ConfigurarInventario" />
         <activity android:name="mx.ipn.escom.inventario.vista.Inventario" />

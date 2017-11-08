@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.example.gambo.demo_proyecto.R;
 
-import mx.ipn.escom.codigoqr.vista.Activity_escanerCodigo;
+import mx.ipn.escom.codigoqr.vista.EscanearQRActivity;
 import mx.ipn.escom.controlacceso.vista.ConfigurarCuenta;
 import mx.ipn.escom.controlacceso.vista.InicioSesionActivity;
 import mx.ipn.escom.inventario.vista.InventariosPrincipal;
@@ -48,14 +48,14 @@ public class MenuActivity extends AppCompatActivity {
         textView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MenuActivity.this,Activity_escanerCodigo.class);
+                Intent intent=new Intent(MenuActivity.this,EscanearQRActivity.class);
                 startActivity(intent);
             }
         });
         imageView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MenuActivity.this,Activity_escanerCodigo.class);
+                Intent intent=new Intent(MenuActivity.this,EscanearQRActivity.class);
                 startActivity(intent);
             }
         });
