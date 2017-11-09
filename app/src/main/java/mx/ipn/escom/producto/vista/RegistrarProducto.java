@@ -10,7 +10,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.gambo.demo_proyecto.R;
+import mx.ipn.escom.R;
 
 public class RegistrarProducto extends AppCompatActivity {
     private Spinner equipoSpinner;

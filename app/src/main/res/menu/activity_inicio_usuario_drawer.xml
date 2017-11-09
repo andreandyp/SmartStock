@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/inventario"
+            android:icon="@mipmap/ic_folder_black_24dp"
+            android:title="Mi inventario" />
+        <item
+            android:id="@+id/reportes"
+            android:icon="@mipmap/ic_description_black_24dp"
+            android:title="Reportes" />
+        <item
+            android:id="@+id/codigoqr"
+            android:icon="@mipmap/icon_qr"
+            android:title="Código QR" />
+    </group>
+
+    <item android:title="Cuentas">
+        <menu>
+            <item
+                android:id="@+id/admin"
+                android:icon="@mipmap/ic_people_black_24dp"
+                android:title="Administrar cuentas" />
+            <item
+                android:id="@+id/salir"
+                android:icon="@mipmap/ic_vpn_key_black_24dp"
+                android:title="Cerrar sesión" />
+        </menu>
+    </item>
+
+</menu>

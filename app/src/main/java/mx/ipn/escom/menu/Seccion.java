@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.gambo.demo_proyecto.R;
+import mx.ipn.escom.R;
 
 /**
  * Created by gambo on 05/09/2017.

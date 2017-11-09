@@ -9,7 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.gambo.demo_proyecto.R;
+import mx.ipn.escom.R;
 
 import java.util.ArrayList;
 

@@ -8,9 +8,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.gambo.demo_proyecto.R;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
+
+import mx.ipn.escom.R;
 
 public class EscanearQRActivity extends AppCompatActivity {
 
@@ -30,6 +31,7 @@ public class EscanearQRActivity extends AppCompatActivity {
         integrator = new IntentIntegrator(this);
         integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
         integrator.setPrompt("Escanea el código QR del producto");
+        integrator.setOrientationLocked(false);
         integrator.setBarcodeImageEnabled(true);
         integrator.initiateScan();
     }

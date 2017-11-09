@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.gambo.demo_proyecto">
+    package="mx.ipn.escom">
 
     <uses-feature android:name="android.hardware.camera" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icono"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/icono"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name="mx.ipn.escom.controlacceso.vista.InicioSesionActivity">
+        <activity android:name=".controlacceso.vista.InicioSesionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="mx.ipn.escom.vistas.MenuActivity" />
 
-        <!--Al establecerla como la actividad principal, ya no es necesario declararla en el manifest-->
-        <!--<activity android:name="mx.ipn.escom.controlacceso.vista.InicioSesionActivity" />-->
 
-        <activity android:name="mx.ipn.escom.controlacceso.vista.Activity_editarEmpleado" />
-        <activity android:name="mx.ipn.escom.controlacceso.vista.CambiarContrasenaActivity" />
-        <activity android:name="mx.ipn.escom.controlacceso.vista.IngresaCodigoActivity" />
-        <activity android:name="mx.ipn.escom.controlacceso.vista.OlvideContrasenaActivity" />
-        <activity android:name="mx.ipn.escom.controlacceso.vista.ManejoUsuariosActivity" />
-        <activity android:name="mx.ipn.escom.controlacceso.vista.UsuarioInicioActivity" />
-        <activity android:name="mx.ipn.escom.controlacceso.vista.RegistrarEmpresaActivity" />
-        <activity android:name="mx.ipn.escom.codigoqr.vista.IngresaCodigoActivity" />
-        <activity android:name="mx.ipn.escom.codigoqr.vista.EscanearQRActivity" />
-        <activity android:name="mx.ipn.escom.inventario.vista.ConfigurarInventario" />
-        <activity android:name="mx.ipn.escom.inventario.vista.Inventario" />
-        <activity android:name="mx.ipn.escom.inventario.vista.InventariosPrincipal" />
-        <activity android:name="mx.ipn.escom.producto.vista.Activity_Producto" />
-        <activity android:name="mx.ipn.escom.producto.vista.Formulario_CPU" />
-        <activity android:name="mx.ipn.escom.producto.vista.Formulario_Monitor" />
-        <activity android:name="mx.ipn.escom.producto.vista.Formulario_Perifericos" />
-        <activity android:name="mx.ipn.escom.producto.vista.Formularo_Portatil" />
-        <activity android:name="mx.ipn.escom.producto.vista.RegistrarProducto" />
-        <activity android:name="mx.ipn.escom.reporte.vista.ReportesActivity" />
-        <activity android:name="mx.ipn.escom.controlacceso.vista.ConfigCuentaActivity" />
-        <activity android:name="mx.ipn.escom.controlacceso.vista.ConfigurarCuenta"/>
+        <activity android:name=".controlacceso.vista.Activity_editarEmpleado" />
+        <activity android:name=".controlacceso.vista.CambiarContrasenaActivity" />
+        <activity android:name=".controlacceso.vista.IngresaCodigoActivity" />
+        <activity android:name=".controlacceso.vista.OlvideContrasenaActivity" />
+        <activity android:name=".controlacceso.vista.ManejoUsuariosActivity" />
+        <activity android:name=".controlacceso.vista.RegistrarEmpresaActivity" />
+        <activity android:name=".codigoqr.vista.IngresaCodigoActivity" />
+        <activity android:name=".codigoqr.vista.EscanearQRActivity" android:screenOrientation="fullSensor" />
+        <activity android:name=".inventario.vista.ConfigurarInventario" />
+        <activity android:name=".inventario.vista.Inventario" />
+        <activity android:name=".inventario.vista.InventariosPrincipal" />
+        <activity android:name=".producto.vista.Activity_Producto" />
+        <activity android:name=".producto.vista.Formulario_CPU" />
+        <activity android:name=".producto.vista.Formulario_Monitor" />
+        <activity android:name=".producto.vista.Formulario_Perifericos" />
+        <activity android:name=".producto.vista.Formularo_Portatil" />
+        <activity android:name=".producto.vista.RegistrarProducto" />
+        <activity android:name=".reporte.vista.ReportesActivity" />
+        <activity android:name=".controlacceso.vista.ConfigCuentaActivity" />
+        <activity android:name=".controlacceso.vista.ConfigurarCuenta" />
+        <activity
+            android:name=".controlacceso.vista.InicioUsuarioActivity"
+            android:label="Smart Stock"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

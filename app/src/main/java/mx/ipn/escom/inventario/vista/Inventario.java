@@ -3,7 +3,7 @@ package mx.ipn.escom.inventario.vista;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.example.gambo.demo_proyecto.R;
+import mx.ipn.escom.R;
 
 import mx.ipn.escom.inventario.vista.fragment.InvetarioEquipoFragment;
 

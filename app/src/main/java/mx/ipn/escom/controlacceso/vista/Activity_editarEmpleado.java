@@ -3,7 +3,7 @@ package mx.ipn.escom.controlacceso.vista;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.example.gambo.demo_proyecto.R;
+import mx.ipn.escom.R;
 
 public class Activity_editarEmpleado extends AppCompatActivity {
 

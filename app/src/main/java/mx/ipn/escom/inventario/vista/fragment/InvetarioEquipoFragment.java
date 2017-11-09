@@ -11,7 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-import com.example.gambo.demo_proyecto.R;
+import mx.ipn.escom.R;
 
 import mx.ipn.escom.producto.vista.Activity_Producto;
 import mx.ipn.escom.producto.vista.RegistrarProducto;

@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 
-import com.example.gambo.demo_proyecto.R;
+import mx.ipn.escom.R;
 
 
 public class GeneralFragment extends Fragment {

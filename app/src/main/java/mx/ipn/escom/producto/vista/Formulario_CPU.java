@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.gambo.demo_proyecto.R;
+import mx.ipn.escom.R;
 
 public class Formulario_CPU extends AppCompatActivity {
     private Button btnFinalizar;

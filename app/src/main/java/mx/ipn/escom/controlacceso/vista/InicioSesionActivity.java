@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.gambo.demo_proyecto.R;
+import mx.ipn.escom.R;
 
 public class InicioSesionActivity extends AppCompatActivity {
 
@@ -21,7 +21,7 @@ public class InicioSesionActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(InicioSesionActivity.this,UsuarioInicioActivity.class);
+                Intent intent =new Intent(InicioSesionActivity.this,InicioUsuarioActivity.class);
                 startActivity(intent);
             }
         });

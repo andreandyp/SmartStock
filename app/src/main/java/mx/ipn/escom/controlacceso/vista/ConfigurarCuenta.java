@@ -3,7 +3,7 @@ package mx.ipn.escom.controlacceso.vista;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.gambo.demo_proyecto.R;
+import mx.ipn.escom.R;
 
 public class ConfigurarCuenta extends AppCompatActivity {
 
