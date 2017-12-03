@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="mx.ipn.escom.inventario.vista.ConfigurarInventario">
+    tools:context="mx.ipn.escom.inventario.inventario.ConfigurarInventario">
 
     <TextView
         android:id="@+id/lblTitulo"

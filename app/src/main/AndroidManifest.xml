@@ -18,8 +18,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
         <activity android:name=".controlacceso.vista.Activity_editarEmpleado" />
         <activity android:name=".controlacceso.vista.CambiarContrasenaActivity" />
         <activity android:name=".controlacceso.vista.IngresaCodigoActivity" />
@@ -27,10 +25,9 @@
         <activity android:name=".controlacceso.vista.ManejoUsuariosActivity" />
         <activity android:name=".controlacceso.vista.RegistrarEmpresaActivity" />
         <activity android:name=".codigoqr.vista.IngresaCodigoActivity" />
-        <activity android:name=".codigoqr.vista.EscanearQRActivity" android:screenOrientation="fullSensor" />
-        <activity android:name=".inventario.vista.ConfigurarInventario" />
-        <activity android:name=".inventario.vista.Inventario" />
-        <activity android:name=".inventario.vista.InventariosPrincipal" />
+        <activity
+            android:name=".codigoqr.vista.EscanearQRActivity"
+            android:screenOrientation="fullSensor" />
         <activity android:name=".producto.vista.Activity_Producto" />
         <activity android:name=".producto.vista.Formulario_CPU" />
         <activity android:name=".producto.vista.Formulario_Monitor" />
@@ -43,7 +40,8 @@
         <activity
             android:name=".controlacceso.vista.InicioUsuarioActivity"
             android:label="Smart Stock"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".inventario.InventariosActivity"></activity>
     </application>
 
 </manifest>

@@ -1,6 +1,7 @@
 package mx.ipn.escom.controlacceso.vista;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -16,7 +17,7 @@ import android.view.MenuItem;
 
 import mx.ipn.escom.R;
 import mx.ipn.escom.codigoqr.vista.EscanearQRActivity;
-import mx.ipn.escom.inventario.vista.InventariosPrincipal;
+import mx.ipn.escom.inventario.InventariosActivity;
 import mx.ipn.escom.reporte.vista.ReportesActivity;
 
 public class InicioUsuarioActivity extends AppCompatActivity
@@ -28,6 +29,9 @@ public class InicioUsuarioActivity extends AppCompatActivity
         setContentView(R.layout.activity_inicio_usuario);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        SQLiteDatabase bd = openOrCreateDatabase("Inventarios", MODE_PRIVATE, null);
+        bd.execSQL("CREATE TABLE IF NOT EXISTS Inventario(nombre VARCHAR, autor VARCHAR) ");
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -87,7 +91,7 @@ public class InicioUsuarioActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.inventario) {
-            startActivity(new Intent(this, InventariosPrincipal.class));
+            startActivity(new Intent(this, InventariosActivity.class));
         } else if (id == R.id.reportes) {
             startActivity(new Intent(this, ReportesActivity.class));
         } else if (id == R.id.codigoqr) {
