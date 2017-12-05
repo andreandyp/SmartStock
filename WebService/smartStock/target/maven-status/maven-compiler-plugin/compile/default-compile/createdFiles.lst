@@ -1,0 +1,5 @@
+mx\ipn\escom\controlacceso\dao\UsuarioDao.class
+mx\ipn\escom\controlacceso\mapeo\Usuario.class
+mx\ipn\escom\controlacceso\mapeo\Persona.class
+mx\ipn\escom\controlacceso\service\UsuarioService.class
+mx\ipn\escom\contrlacceso\bs\UsuarioBs.class
