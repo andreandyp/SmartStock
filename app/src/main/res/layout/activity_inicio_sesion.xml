@@ -50,7 +50,7 @@
         android:layout_marginEnd="15dp" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/txLogin"
         android:layout_width="249dp"
         android:layout_height="39dp"
         android:ems="10"
@@ -71,11 +71,11 @@
         tools:layout_editor_absoluteX="49dp"
         tools:layout_editor_absoluteY="339dp"
         tools:ignore="ContentDescription"
-        android:layout_alignTop="@+id/editText2"
+        android:layout_alignTop="@+id/txPassword"
         android:layout_alignStart="@+id/imageView2" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/txPassword"
         android:layout_width="247dp"
         android:layout_height="39dp"
         android:ems="10"
@@ -86,8 +86,8 @@
         tools:layout_editor_absoluteY="339dp"
         tools:ignore="LabelFor"
         android:layout_marginTop="18dp"
-        android:layout_below="@+id/editText"
-        android:layout_alignEnd="@+id/editText" />
+        android:layout_below="@+id/txLogin"
+        android:layout_alignEnd="@+id/txLogin" />
 
     <CheckBox
         android:id="@+id/checkBox"
@@ -100,7 +100,7 @@
         android:layout_alignStart="@+id/imageView3" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/linkPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/olvidaste_la_contrase_a"
@@ -109,23 +109,23 @@
         tools:layout_editor_absoluteY="396dp"
         android:layout_alignBaseline="@+id/checkBox"
         android:layout_alignBottom="@+id/checkBox"
-        android:layout_alignEnd="@+id/editText2" />
+        android:layout_alignEnd="@+id/txPassword" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnIniciarSesion"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="121dp"
         android:layout_height="37dp"
+        android:layout_below="@+id/checkBox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
         android:background="#ffce99"
         android:onClick="none"
         android:text="@string/inicia_sesi_n"
         android:textColor="#663500"
-        tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="428dp"
         tools:ignore="TextViewEdits"
-        android:layout_below="@+id/checkBox"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="13dp" />
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="428dp" />
 
     <TextView
         android:id="@+id/textView2"
@@ -136,12 +136,12 @@
         tools:layout_editor_absoluteX="84dp"
         tools:layout_editor_absoluteY="478dp"
         tools:ignore="HardcodedText"
-        android:layout_alignBaseline="@+id/textView3"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_toStartOf="@+id/textView3" />
+        android:layout_alignBaseline="@+id/linkNewCuenta"
+        android:layout_alignBottom="@+id/linkNewCuenta"
+        android:layout_toStartOf="@+id/linkNewCuenta" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/linkNewCuenta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Créala aquí"

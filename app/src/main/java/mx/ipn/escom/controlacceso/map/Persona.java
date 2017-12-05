@@ -1,53 +1,32 @@
 package mx.ipn.escom.controlacceso.map;
 
-import java.util.Date;
-
-/**
- * Created by gambo on 09/10/2017.
- */
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class Persona {
 
-    /**
-     * nombre de la persona
-     */
+    @SerializedName("id")
+    @Expose
+    private int id;
+    @SerializedName("nombre")
+    @Expose
     private String nombre;
-
-    /**
-     * pimer apellido de la persona
-     */
+    @SerializedName("primerApellido")
+    @Expose
     private String primerApellido;
-
-    /**
-     * segundo apellido de la persona
-     */
+    @SerializedName("segundoApellido")
+    @Expose
     private String segundoApellido;
+    @SerializedName("nacimiento")
+    @Expose
+    private String nacimiento;
 
-    /**
-     * fecha de naciminto de la persona
-     */
-    private Date nacimiento;
-
-    /**
-     * constructor sin parametros
-     */
-    public Persona() {
-        super();
+    public int getId() {
+        return id;
     }
 
-    /**
-     * Constructor con todos los parametros
-     *
-     * @param nombre
-     * @param primerApellido
-     * @param segundoApellido
-     * @param nacimiento
-     */
-    public Persona(String nombre, String primerApellido, String segundoApellido, Date nacimiento) {
-        this.nombre = nombre;
-        this.primerApellido = primerApellido;
-        this.segundoApellido = segundoApellido;
-        this.nacimiento = nacimiento;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -74,11 +53,12 @@ public class Persona {
         this.segundoApellido = segundoApellido;
     }
 
-    public Date getNacimiento() {
+    public String getNacimiento() {
         return nacimiento;
     }
 
-    public void setNacimiento(Date nacimiento) {
+    public void setNacimiento(String nacimiento) {
         this.nacimiento = nacimiento;
     }
+
 }

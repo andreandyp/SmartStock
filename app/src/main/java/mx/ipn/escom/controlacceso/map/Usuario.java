@@ -1,25 +1,26 @@
 package mx.ipn.escom.controlacceso.map;
 
-import java.util.Date;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 /**
  * Created by gambo on 09/10/2017.
  */
 
-public class Usuario extends Persona {
+public class Usuario extends Persona{
 
-    /**
-     *
-     */
+
+    @SerializedName("login")
+    @Expose
     private String login;
-
-    /**
-     *
-     */
+    @SerializedName("password")
+    @Expose
     private String password;
 
-    public Usuario(String nombre, String primerApellido, String segundoApellido, Date nacimiento, String login, String password) {
-        super(nombre, primerApellido, segundoApellido, nacimiento);
+    public Usuario() {
+    }
+
+    public Usuario(String login, String password) {
         this.login = login;
         this.password = password;
     }
@@ -39,4 +40,5 @@ public class Usuario extends Persona {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }

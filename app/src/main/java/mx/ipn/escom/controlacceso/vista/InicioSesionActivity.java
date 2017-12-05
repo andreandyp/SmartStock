@@ -5,27 +5,73 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
+import java.io.IOException;
+import java.util.concurrent.BlockingQueue;
+
 import mx.ipn.escom.R;
+import mx.ipn.escom.controlacceso.bs.UsuarioBs;
+import mx.ipn.escom.controlacceso.bs.exception.InicioSesionException;
+import mx.ipn.escom.controlacceso.interfaces.APIServce;
+import mx.ipn.escom.controlacceso.service.APIUtils;
 
 public class InicioSesionActivity extends AppCompatActivity {
+    /**
+     * Botón de inicio de sesión
+     */
+    private Button btnInicioSesion;
+
+    /**
+     *  Negoocio para el manejo de la informacion del usuario.
+     */
+    private UsuarioBs usuarioBs;
+
+    /**
+     * TextView que debera tener el login del usuario.
+     */
+    private EditText login;
+
+    /**
+     * TextView que debera tener el password del usuario.
+     */
+    private EditText password;
+
+    private TextView olvidaPassword;
+    private TextView crearCuenta;
+    private APIServce mpService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio_sesion);
-        final Button button1 = (Button)findViewById(R.id.button);
-        final TextView label2 =(TextView)findViewById(R.id.textView);
-        final TextView label3 =(TextView)findViewById(R.id.textView3);
-        button1.setOnClickListener(new View.OnClickListener() {
+        Button btnInicioSesion = (Button)findViewById(R.id.btnIniciarSesion);
+        olvidaPassword=(TextView) findViewById(R.id.linkPassword);
+        crearCuenta=(TextView) findViewById(R.id.linkNewCuenta);
+        login =(EditText) findViewById(R.id.txLogin);
+        password =(EditText) findViewById(R.id.txPassword);
+        APIUtils apiUtils=new APIUtils();
+        mpService= apiUtils.getAPIService();
+
+        btnInicioSesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(InicioSesionActivity.this,InicioUsuarioActivity.class);
-                startActivity(intent);
+
+                    usuarioBs=new UsuarioBs(InicioSesionActivity.this);
+
+                try {
+                    usuarioBs.validarInicioSesion(String.valueOf(login.getText()),String.valueOf(password.getText()),mpService);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+
             }
         });
-        label2.setOnClickListener(new View.OnClickListener() {
+        olvidaPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(InicioSesionActivity.this,OlvideContrasenaActivity.class);
@@ -33,7 +79,7 @@ public class InicioSesionActivity extends AppCompatActivity {
             }
         });
 
-        label3.setOnClickListener(new View.OnClickListener() {
+        crearCuenta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(InicioSesionActivity.this,RegistrarEmpresaActivity.class);
