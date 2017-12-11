@@ -38,7 +38,11 @@ public class UsuarioBs{
 
     public void validarInicioSesion(String usuario, String password, APIServce mpService) throws IOException, InterruptedException {
 
-        final List<BlockingQueue<Usuario>> blockingDeque = new ArrayList<>();
+        Intent intent = new Intent(inicioSesionActivity.getBaseContext(),InicioUsuarioActivity.class);
+        inicioSesionActivity.startActivity(intent);
+        inicioSesionActivity.finish();
+
+        /*final List<BlockingQueue<Usuario>> blockingDeque = new ArrayList<>();
 
         Call<Usuario> call=mpService.getUser(usuario,password);
         call.enqueue(new Callback<Usuario>() {
@@ -57,7 +61,7 @@ public class UsuarioBs{
                 inicioSesionActivity.startActivity(intent);
                 inicioSesionActivity.finish();
             }
-        });
+        });*/
 
     }
 }

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mx.ipn.escom.inventario.NuevoInventarioActivity">
+
+    <TextView
+        android:id="@+id/tituloInventarios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:text="Agregar inventario"
+        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+    <EditText
+        android:id="@+id/nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tituloInventarios"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Nombre de inventario"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/numero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/nombre"
+        android:layout_marginTop="24dp"
+        android:layout_toStartOf="@+id/aleatorio"
+        android:ems="10"
+        android:hint="Número de inventario"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/aleatorio"
+        style="@android:style/Widget.Material.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/numero"
+        android:text="Aleatorio"
+        android:onClick="numAleatorio"
+        android:textColorLink="@android:color/holo_blue_dark" />
+
+    <TextView
+        android:id="@+id/autor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aleatorio"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="Autor: "
+        android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+
+    <EditText
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/autor"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Descripción del inventario"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/aceptar"
+        style="@android:style/Widget.Material.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/desc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="51dp"
+        android:text="Agregar"
+        android:onClick="nuevo"
+        android:textAppearance="@android:style/TextAppearance.Material" />
+</RelativeLayout>

@@ -30,8 +30,7 @@ public class InicioUsuarioActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        SQLiteDatabase bd = openOrCreateDatabase("Inventarios", MODE_PRIVATE, null);
-        bd.execSQL("CREATE TABLE IF NOT EXISTS Inventario(nombre VARCHAR, autor VARCHAR) ");
+        prepararDB();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +49,49 @@ public class InicioUsuarioActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    private void prepararDB() {
+        SQLiteDatabase bd = openOrCreateDatabase("Inventarios", MODE_PRIVATE, null);
+
+        bd.execSQL("CREATE TABLE IF NOT EXISTS `Inventario` (\n" +
+                "  `idInventario` INT NOT NULL,\n" +
+                "  `idUsuario` INT NOT NULL,\n" +
+                "  `nb_nombre` VARCHAR(45) NOT NULL,\n" +
+                "  `tx_descripcion` VARCHAR(150) NOT NULL,\n" +
+                "  PRIMARY KEY (`idInventario`),\n" +
+                "  CONSTRAINT `fk_inventario_usuario`\n" +
+                "    FOREIGN KEY (`idUsuario`)\n" +
+                "    REFERENCES `Usuario` (`idUsuario`))\n");
+
+        bd.execSQL("CREATE TABLE IF NOT EXISTS `Tipo_Dispositivo` (\n" +
+                "  `idTipo` INT NOT NULL,\n" +
+                "  `nb_tipo` VARCHAR(45) NOT NULL,\n" +
+                "  `tx_descripcion` VARCHAR(75) NOT NULL,\n" +
+                "  `activo` TINYINT NOT NULL,\n" +
+                "  PRIMARY KEY (`idTipo`))\n");
+
+        bd.execSQL("CREATE TABLE IF NOT EXISTS `Dispositivo` (\n" +
+                "  `idDispositivo` INT NOT NULL,\n" +
+                "  `idTipo` INT NOT NULL,\n" +
+                "  `nb_dispositivo` VARCHAR(45) NOT NULL,\n" +
+                "  `marca` VARCHAR(45) NOT NULL,\n" +
+                "  PRIMARY KEY (`idDispositivo`),\n" +
+                "  CONSTRAINT `fk_dispositivo_tipo`\n" +
+                "    FOREIGN KEY (`idTipo`)\n" +
+                "    REFERENCES `Tipo_Dispositivo` (`idTipo`))\n");
+
+        bd.execSQL("CREATE TABLE IF NOT EXISTS `inventario_dispositivo` (\n" +
+                "  `idInventario` INT NOT NULL,\n" +
+                "  `idDispostivo` INT NOT NULL,\n" +
+                "  PRIMARY KEY (`idInventario`, `idDispostivo`),\n" +
+                "  CONSTRAINT `fk_Inventario_dispositivo`\n" +
+                "    FOREIGN KEY (`idInventario`)\n" +
+                "    REFERENCES `Inventario` (`idInventario`)\n" +
+                "    ON DELETE NO ACTION,\n" +
+                "  CONSTRAINT `fk_Inventario_Dispositivoo`\n" +
+                "    FOREIGN KEY (`idDispostivo`)\n" +
+                "    REFERENCES `Dispositivo` (`idDispositivo`))\n");
     }
 
     @Override

@@ -43,7 +43,8 @@
             android:name=".controlacceso.vista.InicioUsuarioActivity"
             android:label="Smart Stock"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".inventario.InventariosActivity"></activity>
+        <activity android:name=".inventario.InventariosActivity" />
+        <activity android:name=".inventario.NuevoInventarioActivity"></activity>
     </application>
 
 </manifest>
