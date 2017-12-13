@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mx.ipn.escom.controlacceso.vista.EditarUsuarioActivity">
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:srcCompat="@mipmap/ic_account_circle_black_24dp"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="64dp"
+        android:layout_marginTop="57dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/txtEditarUsuario" />
+
+    <TextView
+        android:id="@+id/txtEditarUsuario"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:text="Editar Usuario"
+        android:textSize="30sp"
+        android:layout_above="@+id/nbUsuario"
+        android:layout_alignEnd="@+id/nbUsuario" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/nbUsuario"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:hint="Nombre Usuario"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/txtUsuarioEditado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageView6"
+            android:layout_marginTop="27dp"
+            android:inputType="text" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/nbCorreo"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Correo electrónico"
+        android:orientation="horizontal"
+        android:layout_below="@+id/nbUsuario"
+        android:layout_alignStart="@+id/nbUsuario">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/txtCorreoUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageView6"
+            android:layout_marginTop="27dp"
+            android:inputType="textEmailAddress" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/nbPassword"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:orientation="horizontal"
+        app:passwordToggleEnabled="true"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/nbCorreo"
+        android:layout_alignStart="@+id/nbCorreo">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/txtPasswordUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageView6"
+            android:layout_marginTop="27dp"
+            android:inputType="textPassword" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/nbConfirmPassword"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Confirmar Password"
+        android:orientation="horizontal"
+        app:passwordToggleEnabled="true"
+        android:layout_below="@+id/nbPassword"
+        android:layout_alignStart="@+id/nbPassword">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/txtConfirmPasswordUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageView6"
+            android:layout_marginTop="27dp"
+            android:inputType="textPassword" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnConfirmar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/ic_done_white_24dp"
+        android:layout_below="@+id/nbConfirmPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp" />
+
+</RelativeLayout>

@@ -1,5 +1,6 @@
 package mx.ipn.escom.controlacceso.interfaces;
 
+import mx.ipn.escom.controlacceso.map.InformacionEmpresa;
 import mx.ipn.escom.controlacceso.map.Usuario;
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -13,5 +14,8 @@ public interface APIServce {
 
     @GET("controlacceso/{login}/{password}")
     Call<Usuario> getUser(@Path("login") String login,@Path("password") String password);
+
+    @GET("empresa/{informacion}")
+    Call<Integer> saveInformacion(@Path("informacion") InformacionEmpresa informacionEmpresa);
 
 }

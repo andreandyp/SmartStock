@@ -10,137 +10,147 @@
         android:id="@+id/imageView6"
         android:layout_width="44dp"
         android:layout_height="47dp"
+        android:layout_alignBottom="@+id/textView15"
+        android:layout_marginEnd="12dp"
+        android:layout_toStartOf="@+id/textView15"
         app:srcCompat="@mipmap/ic_account_circle_black_24dp"
         tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="29dp"
-        android:layout_marginBottom="33dp"
-        android:layout_above="@+id/editText10"
-        android:layout_alignStart="@+id/textView19" />
+        tools:layout_editor_absoluteY="29dp" />
 
     <TextView
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Configurar cuenta "
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="60dp"
+        android:layout_marginTop="52dp"
+        android:text="Datos de la empresa"
         android:textColor="#663500"
         android:textSize="24sp"
         tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="40dp"
-        android:layout_alignBottom="@+id/imageView6"
-        android:layout_centerHorizontal="true" />
+        tools:layout_editor_absoluteY="40dp" />
 
-    <TextView
-        android:id="@+id/textView16"
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/nbComercial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nombre de usuario"
-        android:textColor="#000000"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="116dp"
-        android:layout_alignBottom="@+id/editText10"
-        android:layout_alignStart="@+id/imageView6" />
+        android:layout_below="@+id/imageView6"
+        android:layout_marginTop="25dp"
+        android:hint="Nombre Comercial"
+        android:orientation="horizontal"
+        android:layout_alignEnd="@+id/textView15"
+        android:layout_alignStart="@+id/imageView6">
 
-    <EditText
-        android:id="@+id/editText10"
-        android:layout_width="179dp"
-        android:layout_height="36dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Usuario 1"
-        android:textSize="14sp"
-        tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="104dp"
-        android:layout_marginBottom="35dp"
-        android:layout_above="@+id/editText11"
-        android:layout_toEndOf="@+id/textView19" />
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/txtNombreComercial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageView6"
+            android:layout_marginTop="27dp"
+            android:inputType="text" />
 
-    <TextView
-        android:id="@+id/textView17"
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/nbDominio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Correo electrónico"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="165dp"
-        android:layout_alignBaseline="@+id/editText11"
-        android:layout_alignBottom="@+id/editText11"
-        android:layout_alignEnd="@+id/textView16" />
+        android:hint="Dominio"
+        android:orientation="horizontal"
+        android:layout_below="@+id/nbComercial"
+        android:layout_alignStart="@+id/nbComercial"
+        android:layout_alignEnd="@+id/nbComercial">
 
-    <EditText
-        android:id="@+id/editText11"
-        android:layout_width="176dp"
-        android:layout_height="35dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="14sp"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="154dp"
-        android:layout_marginBottom="50dp"
-        android:layout_above="@+id/textView18"
-        android:layout_alignStart="@+id/editText10" />
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/txtDominio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageView6"
+            android:layout_marginTop="27dp"
+            android:inputType="text" />
 
-    <TextView
-        android:id="@+id/textView18"
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/nbCorreo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Contraseña"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="235dp"
-        android:layout_above="@+id/editText12"
-        android:layout_alignStart="@+id/textView16" />
+        android:hint="Correo eletrónico"
+        android:orientation="horizontal"
+        android:layout_below="@+id/nbDominio"
+        android:layout_alignStart="@+id/nbDominio"
+        android:layout_alignEnd="@+id/nbDominio">
 
-    <EditText
-        android:id="@+id/editText12"
-        android:layout_width="299dp"
-        android:layout_height="31dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:textSize="14sp"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="265dp"
-        android:layout_marginBottom="22dp"
-        android:layout_above="@+id/textView19"
-        android:layout_alignStart="@+id/textView18" />
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/txtCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageView6"
+            android:layout_marginTop="27dp"
+            android:inputType="textEmailAddress" />
 
-    <TextView
-        android:id="@+id/textView19"
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/nbPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Confirmar contraseña"
-        android:textColor="#000000"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="331dp"
-        android:layout_above="@+id/editText13"
-        android:layout_alignStart="@+id/editText13" />
+        android:hint="Contraseña"
+        app:passwordToggleEnabled="true"
+        android:orientation="horizontal"
+        android:layout_below="@+id/nbCorreo"
+        android:layout_marginTop="37dp"
+        android:layout_alignEnd="@+id/nbCorreo"
+        android:layout_alignStart="@+id/nbCorreo">
 
-    <EditText
-        android:id="@+id/editText13"
-        android:layout_width="298dp"
-        android:layout_height="35dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:textSize="14sp"
-        android:visibility="visible"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="355dp"
-        android:layout_marginBottom="41dp"
-        android:layout_above="@+id/button5"
-        android:layout_centerHorizontal="true" />
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/txtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageView6"
+            android:layout_marginTop="27dp"
+            android:inputType="textPassword" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="98dp"
-        android:layout_height="36dp"
-        android:background="#ffce99"
-        android:text="Aceptar"
-        android:textColor="#663500"
-        tools:layout_editor_absoluteX="270dp"
-        tools:layout_editor_absoluteY="424dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="37dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/nbConfirmarPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Confirmar contraseña"
+        android:orientation="horizontal"
+        app:passwordToggleEnabled="true"
+        android:layout_below="@+id/nbPassword"
+        android:layout_alignStart="@+id/nbPassword"
+        android:layout_alignEnd="@+id/nbPassword">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/txtConfirmarPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageView6"
+            android:layout_marginTop="27dp"
+            android:inputType="textPassword" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnSiguiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/nbConfirmarPassword"
+        android:layout_marginEnd="45dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@android:drawable/arrow_down_float" />
+
 
 </RelativeLayout>

@@ -13,14 +13,7 @@
         android:roundIcon="@mipmap/icono"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".controlacceso.vista.InicioSesionActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".controlacceso.vista.Activity_editarEmpleado" />
+        <activity android:name=".controlacceso.vista.InicioSesionActivity" />
         <activity android:name=".controlacceso.vista.CambiarContrasenaActivity" />
         <activity android:name=".controlacceso.vista.IngresaCodigoActivity" />
         <activity android:name=".controlacceso.vista.OlvideContrasenaActivity" />
@@ -39,12 +32,19 @@
         <activity android:name=".reporte.vista.ReportesActivity" />
         <activity android:name=".controlacceso.vista.ConfigCuentaActivity" />
         <activity android:name=".controlacceso.vista.ConfigurarCuenta" />
-        <activity
-            android:name=".controlacceso.vista.InicioUsuarioActivity"
-            android:label="Smart Stock"
-            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".controlacceso.vista.InicioUsuarioActivity" />
         <activity android:name=".inventario.InventariosActivity" />
-        <activity android:name=".inventario.NuevoInventarioActivity"></activity>
+        <activity
+            android:name=".controlacceso.vista.SmartStockPrincipalActivity"
+            android:label="Smart Stock"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".controlacceso.vista.EditarUsuarioActivity"></activity>
     </application>
 
 </manifest>
