@@ -44,7 +44,9 @@
             android:label="Smart Stock"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".inventario.InventariosActivity" />
-        <activity android:name=".inventario.NuevoInventarioActivity"></activity>
+        <activity android:name=".inventario.NuevoInventarioActivity" />
+        <activity android:name=".producto.ListaProductosActivity" />
+        <activity android:name=".producto.NuevoProductoActivity"></activity>
     </application>
 
 </manifest>
