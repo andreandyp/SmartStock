@@ -37,6 +37,13 @@
         <activity
             android:name=".controlacceso.vista.SmartStockPrincipalActivity"
             android:label="Smart Stock"
+<<<<<<< HEAD
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".inventario.InventariosActivity" />
+        <activity android:name=".inventario.NuevoInventarioActivity" />
+        <activity android:name=".producto.ListaProductosActivity" />
+        <activity android:name=".producto.NuevoProductoActivity"></activity>
+=======
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,6 +52,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".controlacceso.vista.EditarUsuarioActivity"></activity>
+>>>>>>> 25fc764d3f799cab6f811a792d1aae1ab0d19804
     </application>
 
 </manifest>

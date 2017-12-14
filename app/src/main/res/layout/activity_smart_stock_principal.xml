@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mx.ipn.escom.controlacceso.vista.SmartStockPrincipalActivity">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SmartStock"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="86dp"
+        android:layout_marginTop="36dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/txtSubTitle" />
+
+    <TextView
+        android:id="@+id/txtSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inventariando tus equipos"
+        tools:layout_editor_absoluteX="112dp"
+        tools:layout_editor_absoluteY="122dp"
+        android:layout_below="@+id/txtTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="283dp"
+        android:layout_height="226dp"
+        app:srcCompat="@mipmap/caja1"
+        tools:layout_editor_absoluteY="158dp"
+        tools:layout_editor_absoluteX="51dp"
+        android:layout_below="@+id/txtSubTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp" />
+
+    <Button
+        android:id="@+id/btnInicioSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iniciar Sesión"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="384dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/imageView14"
+        android:layout_alignEnd="@+id/btnCrearCuenta" />
+
+    <Button
+        android:id="@+id/btnCrearCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear cuenta"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="447dp"
+        android:layout_below="@+id/btnInicioSesion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp" />
+
+</RelativeLayout>

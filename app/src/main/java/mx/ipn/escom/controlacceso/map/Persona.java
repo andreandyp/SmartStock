@@ -3,7 +3,9 @@ package mx.ipn.escom.controlacceso.map;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Persona {
+import java.io.Serializable;
+
+public class Persona implements Serializable{
 
     @SerializedName("id")
     @Expose
@@ -20,6 +22,16 @@ public class Persona {
     @SerializedName("nacimiento")
     @Expose
     private String nacimiento;
+
+    public Persona() {
+    }
+
+    public Persona(String nombre, String primerApellido, String segundoApellido, String nacimiento) {
+        this.nombre = nombre;
+        this.primerApellido = primerApellido;
+        this.segundoApellido = segundoApellido;
+        this.nacimiento = nacimiento;
+    }
 
     public int getId() {
         return id;

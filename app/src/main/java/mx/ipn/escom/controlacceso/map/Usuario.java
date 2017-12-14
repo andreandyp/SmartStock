@@ -3,11 +3,13 @@ package mx.ipn.escom.controlacceso.map;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * Created by gambo on 09/10/2017.
  */
 
-public class Usuario extends Persona{
+public class Usuario extends Persona implements Serializable{
 
 
     @SerializedName("login")
@@ -21,6 +23,13 @@ public class Usuario extends Persona{
     }
 
     public Usuario(String login, String password) {
+        super();
+        this.login = login;
+        this.password = password;
+    }
+
+    public Usuario(String nombre,String primerApellido,String segundoApellido,String login,String password){
+        super(nombre,primerApellido,segundoApellido,null);
         this.login = login;
         this.password = password;
     }

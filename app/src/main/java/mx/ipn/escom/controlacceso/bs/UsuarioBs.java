@@ -25,7 +25,7 @@ import retrofit2.Response;
  * Created by gambo on 29/10/2017.
  */
 
-public class UsuarioBs{
+public class UsuarioBs {
 
     private InicioSesionActivity inicioSesionActivity;
 
@@ -38,18 +38,18 @@ public class UsuarioBs{
 
     public void validarInicioSesion(String usuario, String password, APIServce mpService) throws IOException, InterruptedException {
 
-        Intent intent = new Intent(inicioSesionActivity.getBaseContext(),InicioUsuarioActivity.class);
+       /* Intent intent = new Intent(inicioSesionActivity.getBaseContext(),InicioUsuarioActivity.class);
         inicioSesionActivity.startActivity(intent);
-        inicioSesionActivity.finish();
+        inicioSesionActivity.finish();*/
 
-        /*final List<BlockingQueue<Usuario>> blockingDeque = new ArrayList<>();
+        final List<BlockingQueue<Usuario>> blockingDeque = new ArrayList<>();
 
-        Call<Usuario> call=mpService.getUser(usuario,password);
+        Call<Usuario> call = mpService.getUser(usuario, password);
         call.enqueue(new Callback<Usuario>() {
             @Override
             public void onResponse(Call<Usuario> call, Response<Usuario> response) {
-                if(response.body()!=null){
-                    Intent intent = new Intent(inicioSesionActivity.getBaseContext(),InicioUsuarioActivity.class);
+                if (response.body() != null) {
+                    Intent intent = new Intent(inicioSesionActivity.getBaseContext(), InicioUsuarioActivity.class);
                     inicioSesionActivity.startActivity(intent);
                     inicioSesionActivity.finish();
                 }
@@ -57,11 +57,11 @@ public class UsuarioBs{
 
             @Override
             public void onFailure(Call<Usuario> call, Throwable t) {
-                Intent intent = new Intent(inicioSesionActivity.getBaseContext(),InicioSesionActivity.class);
+                Intent intent = new Intent(inicioSesionActivity.getBaseContext(), InicioSesionActivity.class);
                 inicioSesionActivity.startActivity(intent);
                 inicioSesionActivity.finish();
             }
-        });*/
+        });
 
     }
 }
