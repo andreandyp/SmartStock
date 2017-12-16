@@ -18,6 +18,7 @@ public class ListaProductosActivity extends AppCompatActivity {
     private ListView listaProductos;
     private SimpleCursorAdapter adaptador;
     private TextView nohay;
+    private String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,14 +26,14 @@ public class ListaProductosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_lista_productos);
         listaProductos = findViewById(R.id.listaProductos);
 
-        String id = this.getIntent().getExtras().getString("ID");
+        id = this.getIntent().getExtras().getString("ID");
         actualizarListView(id);
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        //actualizarListView();
+        actualizarListView(id);
     }
 
     public void agregarProducto(View v){

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import mx.ipn.escom.R;
 
@@ -18,8 +19,8 @@ public class CambiarContrasenaActivity extends AppCompatActivity {
         button8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(CambiarContrasenaActivity.this,InicioSesionActivity.class);
                 finish();
+                startActivity(new Intent(CambiarContrasenaActivity.this,InicioSesionActivity.class));
             }
         });
     }

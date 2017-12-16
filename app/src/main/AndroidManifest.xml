@@ -18,22 +18,17 @@
         <activity android:name=".controlacceso.vista.IngresaCodigoActivity" />
         <activity android:name=".controlacceso.vista.OlvideContrasenaActivity" />
         <activity android:name=".controlacceso.vista.ManejoUsuariosActivity" />
-        <activity android:name=".controlacceso.vista.RegistrarEmpresaActivity" />
-        <activity android:name=".codigoqr.vista.IngresaCodigoActivity" />
         <activity
             android:name=".codigoqr.vista.EscanearQRActivity"
             android:screenOrientation="fullSensor" />
-        <activity android:name=".producto.vista.Activity_Producto" />
-        <activity android:name=".producto.vista.Formulario_CPU" />
-        <activity android:name=".producto.vista.Formulario_Monitor" />
-        <activity android:name=".producto.vista.Formulario_Perifericos" />
-        <activity android:name=".producto.vista.Formularo_Portatil" />
-        <activity android:name=".producto.vista.RegistrarProducto" />
+        <activity android:name=".producto.ListaProductosActivity" />
+        <activity android:name=".producto.NuevoProductoActivity" />
         <activity android:name=".reporte.vista.ReportesActivity" />
         <activity android:name=".controlacceso.vista.ConfigCuentaActivity" />
         <activity android:name=".controlacceso.vista.ConfigurarCuenta" />
-        <activity android:name=".controlacceso.vista.InicioUsuarioActivity" />
+        <activity android:name=".controlacceso.vista.InicioUsuarioActivity" android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".inventario.InventariosActivity" />
+        <activity android:name=".inventario.NuevoInventarioActivity" />
         <activity
             android:name=".controlacceso.vista.SmartStockPrincipalActivity"
             android:label="Smart Stock"

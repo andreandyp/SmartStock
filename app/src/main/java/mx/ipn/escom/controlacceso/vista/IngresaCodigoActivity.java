@@ -18,7 +18,8 @@ public class IngresaCodigoActivity extends AppCompatActivity {
         button7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(IngresaCodigoActivity.this,CambiarContrasenaActivity.class);
+                finish();
+                Intent intent = new Intent(IngresaCodigoActivity.this,CambiarContrasenaActivity.class);
                 startActivity(intent);
             }
         });

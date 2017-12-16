@@ -127,30 +127,4 @@
         tools:layout_editor_absoluteX="132dp"
         tools:layout_editor_absoluteY="428dp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="¿Aún no tienes cuenta?"
-        android:textColor="#000000"
-        tools:layout_editor_absoluteX="84dp"
-        tools:layout_editor_absoluteY="478dp"
-        tools:ignore="HardcodedText"
-        android:layout_alignBaseline="@+id/linkNewCuenta"
-        android:layout_alignBottom="@+id/linkNewCuenta"
-        android:layout_toStartOf="@+id/linkNewCuenta" />
-
-    <TextView
-        android:id="@+id/linkNewCuenta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Créala aquí"
-        android:textColor="#663500"
-        tools:layout_editor_absoluteX="236dp"
-        tools:layout_editor_absoluteY="478dp"
-        tools:ignore="HardcodedText"
-        android:layout_marginBottom="13dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/textView30" />
-
 </RelativeLayout>

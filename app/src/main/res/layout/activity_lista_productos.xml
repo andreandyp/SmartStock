@@ -34,4 +34,14 @@
         android:text="No hay productos"
         android:textAppearance="@android:style/TextAppearance.Material.Medium" />
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/agregar"
+        android:layout_alignStart="@+id/agregar"
+        android:layout_marginBottom="12dp"
+        android:clickable="true"
+        app:srcCompat="@mipmap/icon_qr" />
+
 </RelativeLayout>

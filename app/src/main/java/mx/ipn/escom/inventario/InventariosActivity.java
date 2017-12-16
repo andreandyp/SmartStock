@@ -6,8 +6,13 @@ import android.database.sqlite.SQLiteCursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.ContextMenu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
@@ -22,40 +27,19 @@ public class InventariosActivity extends AppCompatActivity {
     private ListView listaInventarios;
     private SimpleCursorAdapter adaptador;
     private TextView nohay;
+    private SQLiteDatabase bd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inventario);
         listaInventarios = (ListView) findViewById(R.id.listaInventarios);
-
-        actualizarListView();
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        actualizarListView();
-    }
-
-    public void agregarInventario(View v){
-        startActivity(new Intent(this, NuevoInventarioActivity.class));
-    }
-
-    public void actualizarListView(){
-        SQLiteDatabase bd = openOrCreateDatabase("Inventarios", MODE_PRIVATE, null);
-        Cursor cursor = bd.rawQuery("SELECT rowid _id,* FROM Inventario", null);
-
-        if(!cursor.moveToFirst()){
-            return;
-        }
-
         nohay = findViewById(R.id.nohay);
-        nohay.setVisibility(View.INVISIBLE);
+        bd = openOrCreateDatabase("Inventarios", MODE_PRIVATE, null);
 
-        String from[] = new String []{"idInventario", "nb_nombre"};
-        adaptador = new SimpleCursorAdapter(this, R.layout.elemento_inventario, cursor, from, new int[]{R.id.idInventario, R.id.nombre}, 0);
-        listaInventarios.setAdapter(adaptador);
+        registerForContextMenu(listaInventarios);
+
+        actualizarListView();
 
         listaInventarios.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -71,6 +55,66 @@ public class InventariosActivity extends AppCompatActivity {
                 startActivity(abrir);
             }
         });
+    }
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_crud_usuario, menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+
+        SQLiteCursor cursor = (SQLiteCursor) listaInventarios.getItemAtPosition(info.position);
+        String idInventario = cursor.getString(cursor.getColumnIndex("idInventario")),
+                nombre = cursor.getString(cursor.getColumnIndex("nb_nombre"));
+
+        switch (item.getItemId()) {
+            case R.id.menuEditar:
+                Intent abrir = new Intent(getBaseContext(), NuevoInventarioActivity.class);
+                Bundle datos = new Bundle();
+                datos.putString("Nombre", nombre);
+                datos.putString("Número", idInventario);
+                datos.putString("Descripción", cursor.getString(cursor.getColumnIndex("nb_nombre")));
+                abrir.putExtras(datos);
+                startActivity(abrir);
+
+                return true;
+            case R.id.menuEliminar:
+                bd.execSQL("DELETE FROM Inventario WHERE idInventario = "+idInventario);
+                Toast.makeText(getApplicationContext(), "Inventario eliminado", Toast.LENGTH_SHORT);
+                actualizarListView();
+                return true;
+            default:
+                return super.onContextItemSelected(item);
+        }
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        actualizarListView();
+    }
+
+    public void agregarInventario(View v){
+        startActivity(new Intent(this, NuevoInventarioActivity.class));
+    }
+
+    public void actualizarListView(){
+        Cursor cursor = bd.rawQuery("SELECT rowid _id,* FROM Inventario", null);
+
+        if(!cursor.moveToFirst()){
+            nohay.setVisibility(View.VISIBLE);
+        }else{
+            nohay.setVisibility(View.INVISIBLE);
+        }
+
+        String from[] = new String []{"nb_nombre", "tx_descripcion"};
+        int to[] = new int[]{R.id.nombre, R.id.descripcion};
+        adaptador = new SimpleCursorAdapter(this, R.layout.elemento_inventario, cursor, from, to, 0);
+        listaInventarios.setAdapter(adaptador);
 
     }
 

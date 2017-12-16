@@ -16,72 +16,81 @@
         android:text="Agregar inventario"
         android:textAppearance="@android:style/TextAppearance.Material.Large" />
 
-    <EditText
+    <android.support.design.widget.TextInputLayout
         android:id="@+id/nombre"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
         android:layout_below="@+id/tituloInventarios"
-        android:layout_marginTop="30dp"
-        android:ems="10"
-        android:hint="Nombre de inventario"
-        android:inputType="textPersonName" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp">
 
-    <EditText
-        android:id="@+id/numero"
-        android:layout_width="wrap_content"
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del inventario"
+            android:inputType="text"
+            android:singleLine="true" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_below="@+id/nombre"
-        android:layout_marginTop="24dp"
-        android:layout_toStartOf="@+id/aleatorio"
-        android:ems="10"
-        android:hint="Número de inventario"
-        android:inputType="number" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:id="@+id/numero">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:hint="Número de inventario"
+            android:inputType="number"
+            android:singleLine="true" />
+    </android.support.design.widget.TextInputLayout>
 
     <Button
         android:id="@+id/aleatorio"
-        style="@android:style/Widget.Material.Button"
+        style="@android:style/Widget.Holo.Light.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/numero"
         android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/numero"
-        android:text="Aleatorio"
         android:onClick="numAleatorio"
-        android:textColorLink="@android:color/holo_blue_dark" />
+        android:text="Aleatorio" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/autor"
+        android:layout_marginTop="10dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripción del inventario"
+            android:inputType="textMultiLine" />
+    </android.support.design.widget.TextInputLayout>
 
     <TextView
         android:id="@+id/autor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/aleatorio"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
+        android:layout_centerVertical="true"
         android:text="Autor: "
         android:textAppearance="@android:style/TextAppearance.Material.Medium" />
 
-    <EditText
-        android:id="@+id/desc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/autor"
-        android:layout_marginTop="30dp"
-        android:ems="10"
-        android:hint="Descripción del inventario"
-        android:inputType="textMultiLine" />
-
     <Button
         android:id="@+id/aceptar"
-        style="@android:style/Widget.Material.Button"
+        style="@android:style/Widget.Holo.Light.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/desc"
+        android:layout_alignTop="@+id/desc"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="51dp"
-        android:text="Agregar"
+        android:layout_marginTop="72dp"
         android:onClick="nuevo"
-        android:textAppearance="@android:style/TextAppearance.Material" />
+        android:text="Agregar" />
 </RelativeLayout>

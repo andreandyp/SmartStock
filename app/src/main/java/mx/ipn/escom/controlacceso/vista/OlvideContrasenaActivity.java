@@ -18,8 +18,7 @@ public class OlvideContrasenaActivity extends AppCompatActivity {
         button6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(OlvideContrasenaActivity.this,IngresaCodigoActivity.class);
-                setContentView(R.layout.activity_ingresa_codigo);
+                startActivity(new Intent(OlvideContrasenaActivity.this,IngresaCodigoActivity.class));
             }
         });
     }

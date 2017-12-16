@@ -48,7 +48,6 @@ public class InicioSesionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_inicio_sesion);
         Button btnInicioSesion = (Button)findViewById(R.id.btnIniciarSesion);
         olvidaPassword=(TextView) findViewById(R.id.linkPassword);
-        crearCuenta=(TextView) findViewById(R.id.linkNewCuenta);
         login =(EditText) findViewById(R.id.txLogin);
         password =(EditText) findViewById(R.id.txPassword);
         APIUtils apiUtils=new APIUtils();
@@ -79,12 +78,5 @@ public class InicioSesionActivity extends AppCompatActivity {
             }
         });
 
-        crearCuenta.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(InicioSesionActivity.this,RegistrarEmpresaActivity.class);
-                startActivity(intent);
-            }
-        });
     }
-    }
+}

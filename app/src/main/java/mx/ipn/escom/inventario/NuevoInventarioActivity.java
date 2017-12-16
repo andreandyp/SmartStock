@@ -2,17 +2,22 @@ package mx.ipn.escom.inventario;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.Button;
 import android.widget.Toast;
 
 import mx.ipn.escom.R;
 
 public class NuevoInventarioActivity extends AppCompatActivity {
 
-    private EditText nombre, numero, desc;
+    private TextInputLayout nombre, numero, desc;
+    private Button aleatorio;
+    private boolean edicion = false;
+    private SQLiteDatabase bd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,14 +26,32 @@ public class NuevoInventarioActivity extends AppCompatActivity {
         nombre = findViewById(R.id.nombre);
         numero = findViewById(R.id.numero);
         desc = findViewById(R.id.desc);
+        bd = openOrCreateDatabase("Inventarios", MODE_PRIVATE, null);
+
+        if(this.getIntent().getExtras() != null){
+            nombre.getEditText().setText(this.getIntent().getExtras().getString("Nombre"));
+            numero.getEditText().setText(this.getIntent().getExtras().getString("Número"));
+            aleatorio = findViewById(R.id.aleatorio);
+            aleatorio.setEnabled(false);
+            numero.setEnabled(false);
+            desc.getEditText().setText(this.getIntent().getExtras().getString("Descripción"));
+            edicion = true;
+        }
+
     }
 
     public void nuevo(View v){
-        String nNombre = nombre.getText().toString(),
-                nDesc = desc.getText().toString();
-        int nNumero = Integer.parseInt(numero.getText().toString());
+        String nNombre = nombre.getEditText().getText().toString(),
+                nDesc = desc.getEditText().getText().toString();
+        int nNumero = Integer.parseInt(numero.getEditText().getText().toString());
 
-        SQLiteDatabase bd = openOrCreateDatabase("Inventarios", MODE_PRIVATE, null);
+        if(edicion){
+            bd.execSQL("UPDATE Inventario SET nb_nombre = ?, tx_descripcion = ? WHERE idInventario = ?;", new Object[]{nNombre, nDesc, nNumero});
+            Toast.makeText(getBaseContext(), "Inventario actualizado", Toast.LENGTH_LONG).show();
+            finish();
+            return;
+        }
+
         Cursor cursor = bd.rawQuery("SELECT rowid _id,idInventario FROM Inventario WHERE idInventario = "+nNumero, null);
 
         if(cursor.moveToFirst()){
@@ -42,6 +65,6 @@ public class NuevoInventarioActivity extends AppCompatActivity {
     }
 
     public void numAleatorio(View v){
-        numero.setText(Integer.toString((int) (Math.random()*100)));
+        numero.getEditText().setText(Integer.toString((int) (Math.random()*100)));
     }
 }

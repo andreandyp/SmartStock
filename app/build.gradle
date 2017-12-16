@@ -5,6 +5,7 @@ android {
     buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "mx.ipn.escom.smartstock"
+
         minSdkVersion 21
         targetSdkVersion 26
         versionCode 1
