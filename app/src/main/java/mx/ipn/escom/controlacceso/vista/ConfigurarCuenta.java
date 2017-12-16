@@ -1,7 +1,7 @@
 package mx.ipn.escom.controlacceso.vista;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import mx.ipn.escom.R;
 

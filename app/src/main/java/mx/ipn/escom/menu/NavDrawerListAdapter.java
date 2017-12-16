@@ -9,9 +9,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import mx.ipn.escom.R;
-
 import java.util.ArrayList;
+
+import mx.ipn.escom.R;
 
 /**
  * Created by gambo on 05/09/2017.

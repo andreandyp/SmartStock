@@ -9,11 +9,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import java.io.IOException;
-import java.util.concurrent.BlockingQueue;
 
 import mx.ipn.escom.R;
 import mx.ipn.escom.controlacceso.bs.UsuarioBs;
-import mx.ipn.escom.controlacceso.bs.exception.InicioSesionException;
 import mx.ipn.escom.controlacceso.interfaces.APIServce;
 import mx.ipn.escom.controlacceso.service.APIUtils;
 

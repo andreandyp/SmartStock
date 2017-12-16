@@ -1,15 +1,15 @@
 package mx.ipn.escom.producto;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import mx.ipn.escom.R;
 
@@ -19,6 +19,7 @@ public class ListaProductosActivity extends AppCompatActivity {
     private SimpleCursorAdapter adaptador;
     private TextView nohay;
     private String id;
+    private SQLiteDatabase bd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,7 @@ public class ListaProductosActivity extends AppCompatActivity {
         listaProductos = findViewById(R.id.listaProductos);
 
         id = this.getIntent().getExtras().getString("ID");
+        bd = openOrCreateDatabase("Inventarios", MODE_PRIVATE, null);
         actualizarListView(id);
     }
 
@@ -37,18 +39,17 @@ public class ListaProductosActivity extends AppCompatActivity {
     }
 
     public void agregarProducto(View v){
-        //startActivity(new Intent(this, NuevoInventarioActivity.class));
+        startActivity(new Intent(this, NuevoProductoActivity.class));
     }
 
     public void actualizarListView(String id){
-        SQLiteDatabase bd = openOrCreateDatabase("Inventarios", MODE_PRIVATE, null);
-        Cursor cursor = bd.rawQuery("SELECT rowid _id,idDispostivo FROM inventario_dispositivo WHERE idInventario = "+id, null);
+        Cursor cursor = bd.rawQuery("SELECT rowid _id,idDispositivo FROM inventario_dispositivo WHERE idInventario = "+id, null);
 
         if(!cursor.moveToFirst()){
             return;
         }
 
-        Cursor productos = bd.rawQuery("SELECT rowid _id, * FROM Dispositivo WHERE idDispositivo = "+cursor.getColumnName(cursor.getColumnIndex("idDispostivo")),null);
+        Cursor productos = bd.rawQuery("SELECT rowid _id, * FROM Dispositivo WHERE idDispositivo = "+cursor.getColumnName(cursor.getColumnIndex("idDispositivo")),null);
 
         nohay = findViewById(R.id.nohay);
         nohay.setVisibility(View.INVISIBLE);

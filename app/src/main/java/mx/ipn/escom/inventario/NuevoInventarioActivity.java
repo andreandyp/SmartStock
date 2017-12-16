@@ -2,11 +2,12 @@ package mx.ipn.escom.inventario;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import mx.ipn.escom.R;
@@ -31,9 +32,13 @@ public class NuevoInventarioActivity extends AppCompatActivity {
         if(this.getIntent().getExtras() != null){
             nombre.getEditText().setText(this.getIntent().getExtras().getString("Nombre"));
             numero.getEditText().setText(this.getIntent().getExtras().getString("Número"));
+
+            ((TextView) findViewById(R.id.tituloInventarios)).setText("Editar inventario");
+            ((Button) findViewById(R.id.aceptar)).setText("Actualizar");
             aleatorio = findViewById(R.id.aleatorio);
             aleatorio.setEnabled(false);
             numero.setEnabled(false);
+
             desc.getEditText().setText(this.getIntent().getExtras().getString("Descripción"));
             edicion = true;
         }

@@ -1,12 +1,11 @@
 package mx.ipn.escom.controlacceso.vista;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.content.Intent;
 
 import java.util.List;
 

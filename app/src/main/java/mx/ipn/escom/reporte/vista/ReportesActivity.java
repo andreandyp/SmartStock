@@ -12,7 +12,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import mx.ipn.escom.R;
-
 import mx.ipn.escom.reporte.vista.fragment.GeneralFragment;
 import mx.ipn.escom.reporte.vista.fragment.ParticularFragment;
 

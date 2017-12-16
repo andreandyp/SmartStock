@@ -1,25 +1,12 @@
 package mx.ipn.escom.controlacceso.bs;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.BlockingDeque;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingDeque;
 
-import mx.ipn.escom.controlacceso.bs.exception.InicioSesionException;
 import mx.ipn.escom.controlacceso.interfaces.APIServce;
-import mx.ipn.escom.controlacceso.map.Usuario;
 import mx.ipn.escom.controlacceso.vista.InicioSesionActivity;
 import mx.ipn.escom.controlacceso.vista.InicioUsuarioActivity;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 /**
  * Created by gambo on 29/10/2017.
