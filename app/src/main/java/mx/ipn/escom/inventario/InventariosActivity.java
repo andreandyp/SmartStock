@@ -80,7 +80,7 @@ public class InventariosActivity extends AppCompatActivity {
                 return true;
             case R.id.menuEliminar:
                 bd.execSQL("DELETE FROM Inventario WHERE idInventario = "+idInventario);
-                Toast.makeText(getApplicationContext(), "Inventario eliminado", Toast.LENGTH_SHORT);
+                Toast.makeText(getApplicationContext(), "Inventario eliminado", Toast.LENGTH_SHORT).show();
                 actualizarListView();
                 return true;
             default:
@@ -113,5 +113,4 @@ public class InventariosActivity extends AppCompatActivity {
         listaInventarios.setAdapter(adaptador);
 
     }
-
 }

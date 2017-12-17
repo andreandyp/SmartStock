@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mx.ipn.escom.producto.tipos.TipoActivity">
+
+    <TextView
+        android:id="@+id/tituloTipos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="Agregar tipo de dispositivo"
+        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tituloTipos"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:id="@+id/tipo">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del tipo"
+            android:inputType="text"
+            android:singleLine="true" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tipo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:id="@+id/descripcion">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripción"
+            android:inputType="textMultiLine"
+            android:singleLine="false" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/idTipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/descripcion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="296dp"
+            android:layout_height="wrap_content"
+            android:hint="Número de tipo"
+            android:inputType="number"
+            android:singleLine="true" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/aleatTipo"
+        style="@android:style/Widget.Holo.Light.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/idTipo"
+        android:layout_alignParentEnd="true"
+        android:onClick="numAleatorio"
+        android:text="Aleatorio" />
+
+    <Button
+        android:id="@+id/nuevoTipo"
+        style="@android:style/Widget.Holo.Light.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tituloTipos"
+        android:layout_below="@+id/idTipo"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="37dp"
+        android:onClick="agregarTipo"
+        android:text="Agregar" />
+
+    <Button
+        android:id="@+id/eliminarTipo"
+        style="@android:style/Widget.Holo.Light.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/nuevoTipo"
+        android:layout_toEndOf="@+id/nuevoTipo"
+        android:onClick="eliminarTipo"
+        android:visibility="gone"
+        android:text="Eliminar" />
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/agregarTipo"
+        android:orderInCategory="10"
+        android:title="Agregar tipo de dispositivo"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/editarTipo"
+        android:orderInCategory="20"
+        android:title="Editar tipos de dispositivo"
+        app:showAsAction="never" />
+</menu>

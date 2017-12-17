@@ -8,7 +8,6 @@
     <string name="contrase_a">contraseña</string>
     <string name="olvidaste_la_contrase_a">¿Olvidaste la contraseña?</string>
 
-    <string name="action_settings">Configuración</string>
     <string name="hello_world">Hello world!</string>
     <string name="drawer_open">Se abrio el menu lateral</string>
     <string name="drawer_close">Se cerro el menu lateral</string>
@@ -87,5 +86,4 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="title_activity_lista_productos">Lista de productos</string>
 </resources>
