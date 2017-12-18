@@ -2,17 +2,18 @@ package mx.ipn.escom.producto.tipos;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import mx.ipn.escom.BD;
 import mx.ipn.escom.R;
 
-public class TipoActivity extends AppCompatActivity {
+public class NuevoTipoActivity extends AppCompatActivity {
     private TextInputLayout tipo, descripcion, idTipo;
     private Button aleatorio;
     private boolean edicion = false;
@@ -26,7 +27,7 @@ public class TipoActivity extends AppCompatActivity {
         tipo = findViewById(R.id.tipo);
         descripcion = findViewById(R.id.descripcion);
         idTipo = findViewById(R.id.idTipo);
-        bd = openOrCreateDatabase("Inventarios", MODE_PRIVATE, null);
+        bd = BD.getInstance(getApplicationContext());
 
         if(this.getIntent().getExtras() != null){
             tipo.getEditText().setText(this.getIntent().getExtras().getString("Nombre"));
@@ -55,7 +56,7 @@ public class TipoActivity extends AppCompatActivity {
             return;
         }
 
-        Cursor cursor = bd.rawQuery("SELECT rowid _id,idTipo FROM Tipo_Dispositivo WHERE idTipo = "+nNumero, null);
+        Cursor cursor = bd.rawQuery("SELECT rowid _id,idTipo FROM Tipo_Dispositivo WHERE idTipo = ?;", new String[]{Integer.toString(nNumero)});
 
         if(cursor.moveToFirst()){
             Toast.makeText(getBaseContext(), "Ya hay un tipo con ese ID", Toast.LENGTH_LONG).show();
@@ -72,7 +73,8 @@ public class TipoActivity extends AppCompatActivity {
     }
 
     public void eliminarTipo(View v){
-        bd.execSQL("DELETE FROM Tipo_Dispositivo WHERE idTipo = "+Integer.parseInt(idTipo.getEditText().getText().toString()));
+        String tipo = idTipo.getEditText().getText().toString();
+        bd.execSQL("DELETE FROM Tipo_Dispositivo WHERE idTipo = ?", new String[]{ tipo });
         Toast.makeText(getBaseContext(), "Tipo de dispositivo eliminado", Toast.LENGTH_SHORT).show();
         finish();
     }

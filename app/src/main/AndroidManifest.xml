@@ -29,7 +29,7 @@
         <activity
             android:name=".controlacceso.vista.InicioUsuarioActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".inventario.InventariosActivity" />
+        <activity android:name=".inventario.ListaInventariosActivity" />
         <activity android:name=".inventario.NuevoInventarioActivity" />
         <activity
             android:name=".controlacceso.vista.SmartStockPrincipalActivity"
@@ -44,7 +44,7 @@
         <activity android:name=".controlacceso.vista.EditarUsuarioActivity" />
         <activity
             android:name=".producto.tipos.ListaTiposActivity" />
-        <activity android:name=".producto.tipos.TipoActivity"></activity>
+        <activity android:name=".producto.tipos.NuevoTipoActivity"></activity>
     </application>
 
 </manifest>

@@ -12,6 +12,7 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
+import mx.ipn.escom.BD;
 import mx.ipn.escom.R;
 
 public class ListaTiposActivity extends AppCompatActivity {
@@ -27,7 +28,7 @@ public class ListaTiposActivity extends AppCompatActivity {
 
         listaTipos = (ListView) findViewById(R.id.listaTipos);
         nohay = findViewById(R.id.nohay);
-        bd = openOrCreateDatabase("Inventarios", MODE_PRIVATE, null);
+        bd = BD.getInstance(getApplicationContext());
 
         actualizarListView();
 
@@ -40,7 +41,9 @@ public class ListaTiposActivity extends AppCompatActivity {
                         nombre = cursor.getString(cursor.getColumnIndex("nb_tipo")),
                         descripcion = cursor.getString(cursor.getColumnIndex("tx_descripcion"));
 
-                Intent abrir = new Intent(getBaseContext(), TipoActivity.class);
+                cursor.close();
+
+                Intent abrir = new Intent(getBaseContext(), NuevoTipoActivity.class);
                 Bundle datos = new Bundle();
                 datos.putString("Nombre", nombre);
                 datos.putString("Número", idTipo);
@@ -59,7 +62,7 @@ public class ListaTiposActivity extends AppCompatActivity {
     }
 
     public void agregarTipo(View v){
-        startActivity(new Intent(this, TipoActivity.class));
+        startActivity(new Intent(this, NuevoTipoActivity.class));
     }
 
     public void actualizarListView(){
@@ -75,6 +78,7 @@ public class ListaTiposActivity extends AppCompatActivity {
         int to[] = new int[]{R.id.nombreTipo, R.id.descripcionTipo};
         adaptador = new SimpleCursorAdapter(this, R.layout.elemento_tipo, cursor, from, to, 0);
         listaTipos.setAdapter(adaptador);
+
 
     }
 

@@ -16,10 +16,11 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import mx.ipn.escom.BD;
 import mx.ipn.escom.R;
 import mx.ipn.escom.producto.ListaProductosActivity;
 
-public class InventariosActivity extends AppCompatActivity {
+public class ListaInventariosActivity extends AppCompatActivity {
     private ListView listaInventarios;
     private SimpleCursorAdapter adaptador;
     private TextView nohay;
@@ -31,7 +32,7 @@ public class InventariosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_inventario);
         listaInventarios = (ListView) findViewById(R.id.listaInventarios);
         nohay = findViewById(R.id.nohay);
-        bd = openOrCreateDatabase("Inventarios", MODE_PRIVATE, null);
+        bd = BD.getInstance(getApplicationContext());
 
         registerForContextMenu(listaInventarios);
 
@@ -73,13 +74,13 @@ public class InventariosActivity extends AppCompatActivity {
                 Bundle datos = new Bundle();
                 datos.putString("Nombre", nombre);
                 datos.putString("Número", idInventario);
-                datos.putString("Descripción", cursor.getString(cursor.getColumnIndex("nb_nombre")));
+                datos.putString("Descripción", cursor.getString(cursor.getColumnIndex("tx_descripcion")));
                 abrir.putExtras(datos);
                 startActivity(abrir);
 
                 return true;
             case R.id.menuEliminar:
-                bd.execSQL("DELETE FROM Inventario WHERE idInventario = "+idInventario);
+                bd.execSQL("DELETE FROM Inventario WHERE idInventario = ?;", new String[]{ idInventario});
                 Toast.makeText(getApplicationContext(), "Inventario eliminado", Toast.LENGTH_SHORT).show();
                 actualizarListView();
                 return true;

@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import mx.ipn.escom.BD;
 import mx.ipn.escom.R;
 
 public class NuevoInventarioActivity extends AppCompatActivity {
@@ -27,7 +28,7 @@ public class NuevoInventarioActivity extends AppCompatActivity {
         nombre = findViewById(R.id.nombre);
         numero = findViewById(R.id.numero);
         desc = findViewById(R.id.desc);
-        bd = openOrCreateDatabase("Inventarios", MODE_PRIVATE, null);
+        bd = BD.getInstance(getApplicationContext());
 
         if(this.getIntent().getExtras() != null){
             nombre.getEditText().setText(this.getIntent().getExtras().getString("Nombre"));
@@ -57,7 +58,7 @@ public class NuevoInventarioActivity extends AppCompatActivity {
             return;
         }
 
-        Cursor cursor = bd.rawQuery("SELECT rowid _id,idInventario FROM Inventario WHERE idInventario = "+nNumero, null);
+        Cursor cursor = bd.rawQuery("SELECT rowid _id,idInventario FROM Inventario WHERE idInventario = ?;", new String[]{ Integer.toString(nNumero) });
 
         if(cursor.moveToFirst()){
             Toast.makeText(getBaseContext(), "Ya hay un inventario con ese ID", Toast.LENGTH_LONG).show();
