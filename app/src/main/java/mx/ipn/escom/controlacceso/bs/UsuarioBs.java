@@ -1,12 +1,20 @@
 package mx.ipn.escom.controlacceso.bs;
 
 import android.content.Intent;
+import android.widget.Toast;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.BlockingQueue;
 
 import mx.ipn.escom.controlacceso.interfaces.APIServce;
+import mx.ipn.escom.controlacceso.map.Usuario;
 import mx.ipn.escom.controlacceso.vista.InicioSesionActivity;
 import mx.ipn.escom.controlacceso.vista.InicioUsuarioActivity;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Created by gambo on 29/10/2017.
@@ -25,11 +33,14 @@ public class UsuarioBs {
 
     public void validarInicioSesion(String usuario, String password, APIServce mpService) throws IOException, InterruptedException {
 
-        Intent intent = new Intent(inicioSesionActivity.getBaseContext(),InicioUsuarioActivity.class);
+        /* (Modo de depuración)
+
+        Intent intent = new Intent(inicioSesionActivity.getBaseContext(), InicioUsuarioActivity.class);
         inicioSesionActivity.startActivity(intent);
         inicioSesionActivity.finish();
+        */
 
-        /*final List<BlockingQueue<Usuario>> blockingDeque = new ArrayList<>();
+        final List<BlockingQueue<Usuario>> blockingDeque = new ArrayList<>();
 
         Call<Usuario> call = mpService.getUser(usuario, password);
         call.enqueue(new Callback<Usuario>() {
@@ -44,11 +55,9 @@ public class UsuarioBs {
 
             @Override
             public void onFailure(Call<Usuario> call, Throwable t) {
-                Intent intent = new Intent(inicioSesionActivity.getBaseContext(), InicioSesionActivity.class);
-                inicioSesionActivity.startActivity(intent);
-                inicioSesionActivity.finish();
+                Toast.makeText(inicioSesionActivity.getBaseContext(), "Datos incorrectos, intenta de nuevo", Toast.LENGTH_LONG).show();
             }
-        });*/
+        });
 
     }
 }

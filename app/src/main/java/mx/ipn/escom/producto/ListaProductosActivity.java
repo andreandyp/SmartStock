@@ -11,13 +11,17 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 import mx.ipn.escom.BD;
 import mx.ipn.escom.R;
+import mx.ipn.escom.codigoqr.vista.GenerarQRActivity;
 
 public class ListaProductosActivity extends AppCompatActivity {
 
@@ -93,6 +97,33 @@ public class ListaProductosActivity extends AppCompatActivity {
         startActivity(abrir);
     }
 
+    public void generarQR(View v){
+        int elementos = listaProductos.getCount();
+        ArrayList<Producto> elementosQR = new ArrayList<Producto>();
+
+        for(int i = 0; i < elementos; i++){
+            boolean check = ((CheckBox) listaProductos.getChildAt(i).findViewById(R.id.selectQR)).isChecked();
+            if(check){
+                SQLiteCursor actual = (SQLiteCursor) listaProductos.getItemAtPosition(i);
+                String idDispostivo = actual.getString(actual.getColumnIndex("idDispositivo")),
+                        nb_dispositivo = actual.getString(actual.getColumnIndex("nb_dispositivo")),
+                        marca = actual.getString(actual.getColumnIndex("marca"));
+                elementosQR.add(new Producto(idDispostivo, nb_dispositivo, marca, Integer.parseInt(id)));
+            }
+        }
+
+        if(elementosQR.isEmpty()){
+            Toast.makeText(ListaProductosActivity.this, "Selecciona un elemento o más", Toast.LENGTH_LONG).show();
+            return;
+        }
+        Intent abrir = new Intent(ListaProductosActivity.this, GenerarQRActivity.class);
+        Bundle datos = new Bundle();
+        datos.putParcelableArrayList("elementosQR", elementosQR);
+        abrir.putExtras(datos);
+
+        startActivity(abrir);
+    }
+
     public void actualizarListView(String id){
         Cursor cursor = bd.rawQuery("SELECT Dispositivo.rowid AS _id, Dispositivo.idDispositivo, Dispositivo.idTipo, Dispositivo.nb_dispositivo,  Dispositivo.marca FROM Dispositivo INNER JOIN inventario_dispositivo as indi ON Dispositivo.idDispositivo = indi.idDispositivo WHERE idInventario = ?;", new String[]{ id });
 
@@ -106,6 +137,5 @@ public class ListaProductosActivity extends AppCompatActivity {
         String from[] = new String []{"idDispositivo",  "nb_dispositivo", "marca"};
         adaptador = new SimpleCursorAdapter(this, R.layout.elemento_producto, cursor, from, new int[]{ R.id.dispositivoID, R.id.nombre, R.id.marca}, 0);
         listaProductos.setAdapter(adaptador);
-
     }
 }

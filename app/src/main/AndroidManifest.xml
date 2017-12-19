@@ -3,6 +3,8 @@
     package="mx.ipn.escom">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <uses-feature android:name="android.hardware.camera" />
 
@@ -42,9 +44,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".controlacceso.vista.EditarUsuarioActivity" />
-        <activity
-            android:name=".producto.tipos.ListaTiposActivity" />
-        <activity android:name=".producto.tipos.NuevoTipoActivity"></activity>
+        <activity android:name=".producto.tipos.ListaTiposActivity" />
+        <activity android:name=".producto.tipos.NuevoTipoActivity" />
+        <activity android:name=".codigoqr.vista.GenerarQRActivity"></activity>
     </application>
 
 </manifest>

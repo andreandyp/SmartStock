@@ -13,18 +13,6 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"></ListView>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/agregar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="20dp"
-        android:layout_marginEnd="20dp"
-        android:clickable="true"
-        app:srcCompat="@mipmap/icono"
-        android:onClick="agregarProducto"/>
-
     <TextView
         android:id="@+id/nohay"
         android:layout_width="wrap_content"
@@ -36,13 +24,26 @@
         android:textAppearance="@android:style/TextAppearance.Material.Medium" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButton3"
+        android:id="@+id/generarQRS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/agregar"
         android:layout_alignStart="@+id/agregar"
         android:layout_marginBottom="12dp"
         android:clickable="true"
+        android:onClick="generarQR"
         app:srcCompat="@mipmap/icon_qr" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/agregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:clickable="true"
+        app:srcCompat="@mipmap/icono"
+        android:onClick="agregarProducto"/>
 
 </RelativeLayout>
